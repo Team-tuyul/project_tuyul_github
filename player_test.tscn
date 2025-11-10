@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=27 format=3 uid="uid://31okijvyscp4"]
+=======
+[gd_scene load_steps=27 format=3 uid="uid://bjb40ajaaddc3"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://dncy3re3rklxs" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Run_with_shadow.png" id="1_xys6k"]
 

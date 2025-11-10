@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dokmmxit2cis4"]
+
+[ext_resource type="PackedScene" uid="uid://dokmmxit2cis4" path="res://WORLD.3/world.tscn" id="1_37lhc"]
+[ext_resource type="PackedScene" uid="uid://b6ybwhrfagkvf" path="res://character_body_2d.tscn" id="1_motsi"]
+
+[node name="World" instance=ExtResource("1_37lhc")]
+
+[node name="CharacterBody2D2" parent="." index="2" instance=ExtResource("1_motsi")]
+position = Vector2(-453, 1)
