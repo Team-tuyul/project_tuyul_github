@@ -1,6 +1,6 @@
 [gd_scene load_steps=176 format=3 uid="uid://psfl8gcph6mt"]
 
-[ext_resource type="Script" uid="uid://bh5kwmb7swqhq" path="res://character_body_2d(BOSS).gd" id="1_soa55"]
+[ext_resource type="Script" uid="uid://bh5kwmb7swqhq" path="res://BOSS TEST/character_body_2d(BOSS).gd" id="1_soa55"]
 [ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_hurt_with_shadow.png" id="2_hu2hc"]
 [ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_idle_with_shadow.png" id="3_3fcyf"]
 [ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_walk_with_shadow.png" id="4_tq8dd"]
@@ -1284,7 +1284,7 @@ script = ExtResource("1_soa55")
 texture_filter = 1
 scale = Vector2(4.861329, 4.861329)
 sprite_frames = SubResource("SpriteFrames_3fcyf")
-animation = &"seranglari_atas"
+animation = &"idle_bawah"
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_tq8dd")
