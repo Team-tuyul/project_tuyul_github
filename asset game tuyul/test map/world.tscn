@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://be04bteydg47y"]
+
+[ext_resource type="PackedScene" uid="uid://dokmmxit2cis4" path="res://WORLD.3/world.tscn" id="1_qq738"]
+[ext_resource type="PackedScene" uid="uid://b1ovyxo4iawh6" path="res://asset game tuyul/test map/character_body_2d.tscn" id="2_tgrbh"]
+
+[node name="World" instance=ExtResource("1_qq738")]
+
+[node name="CharacterBody2D" parent="CharacterBody2D" index="1" instance=ExtResource("2_tgrbh")]
+position = Vector2(-284, -60)

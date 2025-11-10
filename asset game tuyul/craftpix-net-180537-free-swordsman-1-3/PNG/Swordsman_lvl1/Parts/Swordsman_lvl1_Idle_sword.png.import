@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8d7i4tm14fkw"
-path="res://.godot/imported/Swordsman_lvl1_Idle_sword.png-77fe6befe9073edf40a29e45de5c970d.ctex"
+path="res://.godot/imported/Swordsman_lvl1_Idle_sword.png-c9f0c8cf727cd60ae10ca42360e5a4da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset game tuyul/craftpix-net-180537-free-swordsman-1-3-level-pixel-top-down-sprite-character/PNG/Swordsman_lvl1/Parts/Swordsman_lvl1_Idle_sword.png"
-dest_files=["res://.godot/imported/Swordsman_lvl1_Idle_sword.png-77fe6befe9073edf40a29e45de5c970d.ctex"]
+source_file="res://asset game tuyul/craftpix-net-180537-free-swordsman-1-3/PNG/Swordsman_lvl1/Parts/Swordsman_lvl1_Idle_sword.png"
+dest_files=["res://.godot/imported/Swordsman_lvl1_Idle_sword.png-c9f0c8cf727cd60ae10ca42360e5a4da.ctex"]
 
 [params]
 
