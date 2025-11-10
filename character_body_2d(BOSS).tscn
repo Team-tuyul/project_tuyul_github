@@ -1,14 +1,14 @@
 [gd_scene load_steps=176 format=3 uid="uid://psfl8gcph6mt"]
 
 [ext_resource type="Script" uid="uid://bh5kwmb7swqhq" path="res://character_body_2d(BOSS).gd" id="1_soa55"]
-[ext_resource type="Texture2D" uid="uid://6qrfv1t1fdqt" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_hurt_with_shadow.png" id="2_hu2hc"]
-[ext_resource type="Texture2D" uid="uid://c4v8dajjidrta" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_idle_with_shadow.png" id="3_3fcyf"]
-[ext_resource type="Texture2D" uid="uid://djlg1njywf6ll" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_walk_with_shadow.png" id="4_tq8dd"]
-[ext_resource type="Texture2D" uid="uid://injbrmfu5b26" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_run_with_shadow.png" id="5_lal4l"]
-[ext_resource type="Texture2D" uid="uid://3odwuypd7q4w" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_death_with_shadow.png" id="6_7e582"]
-[ext_resource type="Texture2D" uid="uid://c3srojkytxuvt" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_attack_with_shadow.png" id="7_7e0uh"]
-[ext_resource type="Texture2D" uid="uid://cptiv341etrbx" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_walk_attack_with_shadow.png" id="8_oho15"]
-[ext_resource type="Texture2D" uid="uid://c37h48u6jc4hx" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_run_attack_with_shadow.png" id="9_30lua"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_hurt_with_shadow.png" id="2_hu2hc"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_idle_with_shadow.png" id="3_3fcyf"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_walk_with_shadow.png" id="4_tq8dd"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_run_with_shadow.png" id="5_lal4l"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_death_with_shadow.png" id="6_7e582"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_attack_with_shadow.png" id="7_7e0uh"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_walk_attack_with_shadow.png" id="8_oho15"]
+[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc2/With_shadow/orc2_run_attack_with_shadow.png" id="9_30lua"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0g76g"]
 atlas = ExtResource("2_hu2hc")
