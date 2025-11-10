@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dokmmxit2cis4"]
+[gd_scene format=3 uid="uid://dokmmxit2cis4"]
 
 [ext_resource type="Texture2D" uid="uid://bxhk3hwwbxe61" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_coasts_animation.png" id="1_juo0d"]
 [ext_resource type="Texture2D" uid="uid://dg6aepdtn6mgt" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_floor.png" id="2_dbbgi"]
