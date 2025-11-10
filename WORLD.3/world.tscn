@@ -4065,7 +4065,6 @@ sources/15 = SubResource("TileSetAtlasSource_ig4rd")
 sources/16 = SubResource("TileSetAtlasSource_esu2o")
 
 [node name="World" type="Node2D"]
-position = Vector2(1, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
