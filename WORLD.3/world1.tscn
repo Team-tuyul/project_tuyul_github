@@ -1,24 +1,24 @@
 [gd_scene load_steps=34 format=3 uid="uid://dokmmxit2cis4"]
 
-[ext_resource type="Texture2D" uid="uid://bxhk3hwwbxe61" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_coasts_animation.png" id="1_3fgba"]
-[ext_resource type="Texture2D" uid="uid://dg6aepdtn6mgt" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_floor.png" id="2_nf4hx"]
-[ext_resource type="Texture2D" uid="uid://cmf4leaoefynk" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_walls.png" id="3_mcpc1"]
-[ext_resource type="Texture2D" uid="uid://bc81x16b1lt2j" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/1.png" id="3_r0dxk"]
-[ext_resource type="Texture2D" uid="uid://b0bp8d3murm35" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/2.png" id="4_co4d8"]
-[ext_resource type="Texture2D" uid="uid://dnbljl847kfg0" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/doors_lever_chest_animation.png" id="4_ygjry"]
-[ext_resource type="Texture2D" uid="uid://yo504jx46lmn" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/3.png" id="5_cfn2q"]
-[ext_resource type="Texture2D" uid="uid://db2q0o2gcne5j" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/house_details.png" id="5_dxsw2"]
-[ext_resource type="Texture2D" uid="uid://117tcntn4q3j" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/Trees_animation.png" id="6_mtipg"]
-[ext_resource type="Texture2D" uid="uid://bfd880yqydxdo" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/4.png" id="6_v73am"]
-[ext_resource type="Texture2D" uid="uid://0bn8kotkkvuk" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/5.png" id="7_fdxn7"]
-[ext_resource type="Texture2D" uid="uid://nx1rfik6sbxu" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/walls_floor.png" id="7_r0dxk"]
-[ext_resource type="Texture2D" uid="uid://v7vquxllr8qg" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/ground_grass_details.png" id="8_co4d8"]
-[ext_resource type="Texture2D" uid="uid://b5x40gdll5pj4" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/6.png" id="8_i5s6l"]
-[ext_resource type="Texture2D" uid="uid://jma4yeiyqmex" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/Interior.png" id="9_cfn2q"]
-[ext_resource type="Texture2D" uid="uid://dkp4ss30afxm4" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/1 Tiles/Map_tiles.png" id="10_v73am"]
+[ext_resource type="Texture2D" uid="uid://bxhk3hwwbxe61" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_coasts_animation.png" id="1_juo0d"]
+[ext_resource type="Texture2D" uid="uid://dg6aepdtn6mgt" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_floor.png" id="2_dbbgi"]
+[ext_resource type="Texture2D" uid="uid://bc81x16b1lt2j" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/1.png" id="3_kpv51"]
+[ext_resource type="Texture2D" uid="uid://b0bp8d3murm35" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/2.png" id="4_0704p"]
+[ext_resource type="Texture2D" uid="uid://yo504jx46lmn" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/3.png" id="5_g73os"]
+[ext_resource type="Texture2D" uid="uid://bfd880yqydxdo" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/4.png" id="6_3s2of"]
+[ext_resource type="Texture2D" uid="uid://0bn8kotkkvuk" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/5.png" id="7_s2y18"]
+[ext_resource type="Texture2D" uid="uid://b5x40gdll5pj4" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/6.png" id="8_6eamx"]
+[ext_resource type="Texture2D" uid="uid://cmf4leaoefynk" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_walls.png" id="9_4f3o2"]
+[ext_resource type="Texture2D" uid="uid://dnbljl847kfg0" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/doors_lever_chest_animation.png" id="10_ixw0b"]
+[ext_resource type="Texture2D" uid="uid://db2q0o2gcne5j" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/house_details.png" id="11_1usve"]
+[ext_resource type="Texture2D" uid="uid://117tcntn4q3j" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/Trees_animation.png" id="12_2kors"]
+[ext_resource type="Texture2D" uid="uid://nx1rfik6sbxu" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/walls_floor.png" id="13_5jgu5"]
+[ext_resource type="Texture2D" uid="uid://v7vquxllr8qg" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/ground_grass_details.png" id="14_1vdt7"]
+[ext_resource type="Texture2D" uid="uid://jma4yeiyqmex" path="res://asset game tuyul/craftpix-net-654184-main-characters-home-free-top-down-pixel-art-asset (1)/PNG/Interior.png" id="15_vph8t"]
+[ext_resource type="Texture2D" uid="uid://dkp4ss30afxm4" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/1 Tiles/Map_tiles.png" id="16_rhpfm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdxn7"]
-texture = ExtResource("1_3fgba")
+texture = ExtResource("1_juo0d")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -357,7 +357,7 @@ texture = ExtResource("1_3fgba")
 15:20/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i5s6l"]
-texture = ExtResource("2_nf4hx")
+texture = ExtResource("2_dbbgi")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -480,7 +480,7 @@ texture = ExtResource("2_nf4hx")
 7:14/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_unw06"]
-texture = ExtResource("3_r0dxk")
+texture = ExtResource("3_kpv51")
 texture_region_size = Vector2i(16, 19)
 0:0/0 = 0
 1:0/0 = 0
@@ -488,7 +488,7 @@ texture_region_size = Vector2i(16, 19)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x0s5c"]
-texture = ExtResource("4_co4d8")
+texture = ExtResource("4_0704p")
 texture_region_size = Vector2i(16, 19)
 0:0/0 = 0
 1:0/0 = 0
@@ -496,7 +496,7 @@ texture_region_size = Vector2i(16, 19)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2e53f"]
-texture = ExtResource("5_cfn2q")
+texture = ExtResource("5_g73os")
 texture_region_size = Vector2i(21, 19)
 0:0/0 = 0
 1:0/0 = 0
@@ -504,7 +504,7 @@ texture_region_size = Vector2i(21, 19)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl8o5"]
-texture = ExtResource("6_v73am")
+texture = ExtResource("6_3s2of")
 texture_region_size = Vector2i(17, 21)
 0:0/0 = 0
 1:0/0 = 0
@@ -514,7 +514,7 @@ texture_region_size = Vector2i(17, 21)
 1:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ig4rd"]
-texture = ExtResource("7_fdxn7")
+texture = ExtResource("7_s2y18")
 texture_region_size = Vector2i(21, 20)
 0:0/0 = 0
 1:0/0 = 0
@@ -522,12 +522,12 @@ texture_region_size = Vector2i(21, 20)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esu2o"]
-texture = ExtResource("8_i5s6l")
+texture = ExtResource("8_6eamx")
 texture_region_size = Vector2i(27, 26)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhbf1"]
-texture = ExtResource("3_mcpc1")
+texture = ExtResource("9_4f3o2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -786,7 +786,7 @@ texture = ExtResource("3_mcpc1")
 7:31/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48u52"]
-texture = ExtResource("4_ygjry")
+texture = ExtResource("10_ixw0b")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -904,7 +904,7 @@ texture = ExtResource("4_ygjry")
 4:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ud6os"]
-texture = ExtResource("5_dxsw2")
+texture = ExtResource("11_1usve")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -1020,7 +1020,7 @@ texture = ExtResource("5_dxsw2")
 3:16/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q78xj"]
-texture = ExtResource("6_mtipg")
+texture = ExtResource("12_2kors")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2839,7 +2839,7 @@ texture = ExtResource("6_mtipg")
 35:64/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dc0mu"]
-texture = ExtResource("7_r0dxk")
+texture = ExtResource("13_5jgu5")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -2932,7 +2932,7 @@ texture = ExtResource("7_r0dxk")
 8:10/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0fjn"]
-texture = ExtResource("8_co4d8")
+texture = ExtResource("14_1vdt7")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -3273,7 +3273,7 @@ texture = ExtResource("8_co4d8")
 3:17/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gslx4"]
-texture = ExtResource("9_cfn2q")
+texture = ExtResource("15_vph8t")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -3550,7 +3550,7 @@ texture = ExtResource("9_cfn2q")
 10:24/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yu8hs"]
-texture = ExtResource("10_v73am")
+texture = ExtResource("16_rhpfm")
 6:0/0 = 0
 7:0/0 = 0
 8:0/0 = 0
