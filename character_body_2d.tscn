@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6ybwhrfagkvf"]
+
+[ext_resource type="PackedScene" uid="uid://cmixm21bvq1hi" path="res://script_karakter/character_body_2d.tscn" id="1_f50pn"]
+
+[node name="CharacterBody2D" instance=ExtResource("1_f50pn")]
+
+[node name="CollisionShape2D" parent="." index="2"]
+disabled = false
