@@ -21,10 +21,6 @@ func _ready():
 func _physics_process(_delta):
 	if is_dead or is_hit:
 		return
-	
-	if Input.is_action_just_pressed("interact"):
-		if interaction:
-			interaction.try_pickup_item()
 		
 	cek_input_stealth()
 	player_movement()
@@ -163,11 +159,3 @@ func _die(direction: String) -> void:
 		"kiri":
 			sprite.flip_h = true
 			sprite.play("mati")
-
-
-func _on_player_interaction_item_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_player_interaction_item_area_exited(area: Area2D) -> void:
-	pass # Replace with function body.

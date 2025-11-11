@@ -932,8 +932,8 @@ texture_filter = 1
 position = Vector2(1.4210855e-14, -0.9999995)
 scale = Vector2(2.609375, 2.484375)
 sprite_frames = SubResource("SpriteFrames_wbwqr")
-animation = &"stealth_bawah"
-frame_progress = 0.9054225
+animation = &"idle"
+frame_progress = 0.6319993
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
