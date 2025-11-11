@@ -713,7 +713,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wi2xh")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle_atas",
 "speed": 5.0
 }, {
@@ -754,7 +754,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4dlb6")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle_bawah",
 "speed": 5.0
 }, {
@@ -795,7 +795,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i5n8d")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle_sword",
 "speed": 5.0
 }, {
@@ -818,7 +818,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x1csb")
 }],
-"loop": true,
+"loop": false,
 "name": &"jalan",
 "speed": 5.0
 }, {
@@ -841,7 +841,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5i3cs")
 }],
-"loop": true,
+"loop": false,
 "name": &"jalan_atas",
 "speed": 5.0
 }, {
@@ -864,7 +864,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1r360")
 }],
-"loop": true,
+"loop": false,
 "name": &"jalan_bawah",
 "speed": 5.0
 }, {
@@ -884,7 +884,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oq4po")
 }],
-"loop": true,
+"loop": false,
 "name": &"kena_hit",
 "speed": 5.0
 }, {
@@ -904,7 +904,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_26qde")
 }],
-"loop": true,
+"loop": false,
 "name": &"kena_hit_atas",
 "speed": 5.0
 }, {
@@ -924,7 +924,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mmnjc")
 }],
-"loop": true,
+"loop": false,
 "name": &"kena_hit_bawah",
 "speed": 5.0
 }, {
@@ -953,7 +953,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e7gk0")
 }],
-"loop": true,
+"loop": false,
 "name": &"lari",
 "speed": 5.0
 }, {
@@ -982,7 +982,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_et6np")
 }],
-"loop": true,
+"loop": false,
 "name": &"lari_atas",
 "speed": 5.0
 }, {
@@ -1011,7 +1011,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bhtdc")
 }],
-"loop": true,
+"loop": false,
 "name": &"lari_bawah",
 "speed": 5.0
 }, {
@@ -1037,7 +1037,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_876kp")
 }],
-"loop": true,
+"loop": false,
 "name": &"mati",
 "speed": 5.0
 }, {
@@ -1063,7 +1063,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cdei0")
 }],
-"loop": true,
+"loop": false,
 "name": &"mati_atas",
 "speed": 5.0
 }, {
@@ -1089,7 +1089,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_btx7r")
 }],
-"loop": true,
+"loop": false,
 "name": &"mati_bawah",
 "speed": 5.0
 }, {
@@ -1118,7 +1118,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kdwml")
 }],
-"loop": true,
+"loop": false,
 "name": &"run_attack",
 "speed": 5.0
 }, {
@@ -1147,7 +1147,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hyj3b")
 }],
-"loop": true,
+"loop": false,
 "name": &"run_attack_atas",
 "speed": 5.0
 }, {
@@ -1176,7 +1176,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7v2o7")
 }],
-"loop": true,
+"loop": false,
 "name": &"run_attack_bawah",
 "speed": 5.0
 }, {
@@ -1205,7 +1205,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pxkn1")
 }],
-"loop": true,
+"loop": false,
 "name": &"sword_animation_up",
 "speed": 5.0
 }, {
@@ -1234,7 +1234,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sshyq")
 }],
-"loop": true,
+"loop": false,
 "name": &"sword_attack_down",
 "speed": 5.0
 }, {
@@ -1263,7 +1263,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xk3jy")
 }],
-"loop": true,
+"loop": false,
 "name": &"sword_attack_samping",
 "speed": 5.0
 }, {
@@ -1286,7 +1286,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_emkvc")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_attack",
 "speed": 5.0
 }, {
@@ -1309,7 +1309,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_esgxs")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_attack_atas",
 "speed": 5.0
 }, {
@@ -1332,7 +1332,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3jy12")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk_attack_bawah",
 "speed": 5.0
 }]
@@ -1342,15 +1342,16 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_fhi6y")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(1.0952381, 1)
 sprite_frames = SubResource("SpriteFrames_b6muj")
-animation = &"jalan"
-autoplay = "idle_bawah"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+animation = &"sword_attack_samping"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
