@@ -616,11 +616,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ffng6"]
-radius = 14.0
-height = 34.0
+height = 28.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ffng6"]
-radius = 22.0
+radius = 20.12461
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ffng6")

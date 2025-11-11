@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 @onready var hitbox = $Hitbox                         # CollisionShape2D untuk kena damage
 @onready var serang_area = $"Area Serang"             # Area2D untuk mendeteksi player
-@onready var serang_shape = $"Area Serang/CollisionShape2D"
+@onready var serang_shape = $"Area Serang"
 
 @export var max_hp: int = 50
 @export var damage: int = 10
@@ -65,8 +65,9 @@ func _play_serang():
 		"kanan_kiri":
 			anim.play("serang_kanan_kiri")
 	
-	anim.animation_finished.connect(_on_serang_selesai, CONNECT_ONE_SHOT)
-
+	# Cegah double connect
+	if not anim.animation_finished.is_connected(_on_serang_selesai):
+		anim.animation_finished.connect(_on_serang_selesai, CONNECT_ONE_SHOT)
 
 func _play_damage():
 	is_taking_damage = true

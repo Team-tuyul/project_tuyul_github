@@ -6,13 +6,11 @@ extends CharacterBody2D
 @onready var attack_timer = $AttackTimer
 
 # === STAT ===
-var max_health = 1000
-var health = 1000
 var attack_min = 10
 var attack_max = 20
-var speed = 60
-var chase_speed = 60
-var attack_cooldown = 8.0
+var speed = 30
+var chase_speed = 30
+var attack_cooldown = 3.0
 
 # === INTERNAL STATE ===
 var player: Node2D = null
@@ -23,9 +21,9 @@ var random_target = Vector2.ZERO
 var rng = RandomNumberGenerator.new()
 
 # === KONSTANTA PERILAKU ===
-const RANDOM_WALK_RADIUS = 250
-const IDLE_DURATION = 2.5
-const STOP_DISTANCE = 5.0 # ❗ Anti-sticky jarak aman agar tidak nempel
+const RANDOM_WALK_RADIUS = 200
+const IDLE_DURATION = 2.0
+const STOP_DISTANCE = 10.0
 
 func _ready():
 	rng.randomize()
@@ -34,11 +32,9 @@ func _ready():
 	area_deteksi.body_exited.connect(_on_player_lost)
 	area_serang.body_entered.connect(_on_attack_range)
 	area_serang.body_exited.connect(_on_attack_out)
-
 	attack_timer.timeout.connect(_on_attack_timer_timeout)
 
 	_set_random_target()
-
 
 func _physics_process(delta):
 	if is_attacking and player:
@@ -49,22 +45,30 @@ func _physics_process(delta):
 
 	if is_chasing and player:
 		var dist = global_position.distance_to(player.global_position)
-
-		if dist > STOP_DISTANCE: # ✅ Anti-sticky
+		if dist > STOP_DISTANCE:
 			var dir = (player.global_position - global_position).normalized()
 			velocity = dir * chase_speed
-			anim.play(_get_anim("lari", dir))
+
+			var is_running = true
+			if is_attacking:
+				if is_running:
+					anim.play(_get_anim("seranglari", dir))
+				else:
+					anim.play(_get_anim("serangjalan", dir))
+			else:
+				if is_running:
+					anim.play(_get_anim("lari", dir))
+				else:
+					anim.play(_get_anim("jalan", dir))
 		else:
 			velocity = Vector2.ZERO
-			var dir = (player.global_position - global_position).normalized()
-			anim.play(_get_anim("idle", dir))
-
+			anim.play(_get_anim("idle", (player.global_position - global_position).normalized()))
 	else:
-		# === RANDOM WALK ===
+		# === RANDOM GERAK ===
 		if global_position.distance_to(random_target) < 10:
 			idle_timer += delta
 			velocity = Vector2.ZERO
-			anim.play(_get_anim("idle"))
+			anim.play(_get_anim("idle", Vector2.DOWN))
 			if idle_timer >= IDLE_DURATION:
 				_set_random_target()
 				idle_timer = 0.0
@@ -92,7 +96,6 @@ func _on_player_detected(body):
 		is_chasing = true
 		is_attacking = false
 
-
 func _on_player_lost(body):
 	if body.is_in_group("player"):
 		is_chasing = false
@@ -109,19 +112,17 @@ func _on_attack_range(body):
 		_do_attack(body)
 		attack_timer.start(attack_cooldown)
 
-
 func _on_attack_out(body):
 	if body.is_in_group("player"):
 		is_attacking = false
 		attack_timer.stop()
 
-
 func _do_attack(target):
-	if not target: return
+	if not target:
+		return
 	var damage = rng.randi_range(attack_min, attack_max)
 	if target.has_method("take_damage"):
 		target.take_damage(damage)
-
 
 func _on_attack_timer_timeout():
 	if is_attacking and player:
@@ -129,35 +130,19 @@ func _on_attack_timer_timeout():
 		attack_timer.start(attack_cooldown)
 
 
-# === ANIMASI ARAH FIXED ===
+# === ANIMASI ARAH ===
 func _get_anim(base:String, dir:Vector2=Vector2.ZERO) -> String:
-	if dir == Vector2.ZERO:
-		anim.flip_h = false
-		return base + "_bawah"
-
+	# Arah kanan / kiri
 	if abs(dir.x) > abs(dir.y):
 		anim.flip_h = dir.x < 0
 		return base + "_kanan_kiri"
+
+	# Arah atas
 	elif dir.y < 0:
 		anim.flip_h = false
 		return base + "_atas"
+
+	# Arah bawah
 	else:
 		anim.flip_h = false
 		return base + "_bawah"
-
-
-# === DAMAGE ===
-func take_damage(amount:int):
-	health -= amount
-	anim.play(_get_anim("damage"))
-	if health <= 0:
-		_die()
-
-
-func _die():
-	is_chasing = false
-	is_attacking = false
-	velocity = Vector2.ZERO
-	anim.play(_get_anim("mati"))
-	await anim.animation_finished
-	queue_free()

@@ -1268,11 +1268,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tq8dd"]
-radius = 14.28
+radius = 14.0
 height = 38.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lal4l"]
-radius = 55.77
+radius = 29.15476
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7e582"]
 radius = 121.82
@@ -1282,9 +1282,9 @@ script = ExtResource("1_7xhmd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2, 2)
+scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_3fcyf")
-animation = &"idle_atas"
+animation = &"damage_atas"
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_tq8dd")
@@ -1301,7 +1301,6 @@ debug_color = Color(0.9644572, 9.62615e-07, 0.49692172, 0.41960785)
 [node name="DeteksiPlayer" type="Area2D" parent="."]
 
 [node name="DeteksiPlayer" type="CollisionShape2D" parent="DeteksiPlayer"]
-position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_7e582")
 
 [node name="AttackTimer" type="Timer" parent="."]
