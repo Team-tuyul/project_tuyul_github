@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cisn51rjkf65d"]
+
+[ext_resource type="PackedScene" uid="uid://eexmhk8hhuhs" path="res://uidesign5/in_game_ui.tscn" id="1_i3e14"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="inGameUI" parent="." instance=ExtResource("1_i3e14")]

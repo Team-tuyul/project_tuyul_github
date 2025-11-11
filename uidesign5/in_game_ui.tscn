@@ -738,7 +738,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_00aw2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_00aw2")
 
 [node name="pauseButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
-texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -752,7 +751,6 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="toggleSettingMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
-texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -762,7 +760,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_ebu2c")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ebu2c")
 
 [node name="quitButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
-texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -772,7 +769,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_hjk8w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hjk8w")
 
 [node name="statDisplayContainer" type="VBoxContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
-texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
@@ -780,7 +776,6 @@ theme_override_constants/separation = 0
 script = ExtResource("3_2dq48")
 
 [node name="coinDisplay" type="Label" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
-texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
@@ -790,7 +785,6 @@ theme_override_font_sizes/font_size = 30
 text = "COINS:"
 
 [node name="scoreDisplay" type="Label" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
-texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
@@ -809,7 +803,6 @@ size_flags_vertical = 8
 theme_override_constants/separation = 20
 
 [node name="toggleMenuButton" type="Button" parent="popupMenu/baseMenuOpenButtonContainer"]
-texture_filter = 1
 custom_minimum_size = Vector2(50, 4)
 layout_mode = 2
 size_flags_horizontal = 4
