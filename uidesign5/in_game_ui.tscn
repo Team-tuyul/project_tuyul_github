@@ -1,8 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://b4y3d6huvsicc"]
+[gd_scene load_steps=36 format=3 uid="uid://eexmhk8hhuhs"]
 
 [ext_resource type="Texture2D" uid="uid://b2kcc4gkfxpgq" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_mr5hi"]
-[ext_resource type="Script" uid="uid://cegdnsjfqpsrc" path="res://WORLD.3/popup_menu.gd" id="1_sis81"]
+[ext_resource type="Script" uid="uid://o72efkqv4sv8" path="res://uidesign5/popup_menu_manager.gd" id="1_o8w1j"]
 [ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="2_a2rtn"]
+[ext_resource type="Script" uid="uid://cprjh2wh320tp" path="res://uidesign5/stat_display_menu_manger.gd" id="3_2dq48"]
 [ext_resource type="FontFile" uid="uid://iyko7vrordi8" path="res://uidesign5/toybox_font/ToyBox.ttf" id="3_5rjt0"]
 [ext_resource type="Texture2D" uid="uid://keklegn3ussx" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/Sprite sheets/sampleimage.jpg" id="6_6phbl"]
 [ext_resource type="Texture2D" uid="uid://c6o6b1nb8x41y" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/audio-off-icon.png" id="7_c0eun"]
@@ -82,6 +83,562 @@ expand_margin_right = 4.0
 expand_margin_bottom = 9.0
 region_rect = Rect2(309, 133, 7, 18)
 
+[sub_resource type="Animation" id="Animation_37co0"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_5x1nm"]
+resource_name = "close_helpMenu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("helpMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("helpMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0v8pi"]
+resource_name = "close_menu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(350, 160), Vector2(0, 160), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("menu/baseMenuScreen/VBoxContainer/toggleMenuButton:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("menu/baseMenuScreen/VBoxContainer/toggleMenuButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("baseMenuOpenButtonContainer:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("baseMenuOpenButtonContainer:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uwry7"]
+resource_name = "close_pauseMenu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pauseMenu/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.478431), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pauseMenu/pauseButton:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(70, 120), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("menu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("menu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g5bjr"]
+resource_name = "close_settingMenu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("settingMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("settingMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qob4l"]
+resource_name = "open_helpMenu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("helpMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("helpMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ng0uy"]
+resource_name = "open_menu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 160), Vector2(350, 160)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.333333, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("menu/baseMenuScreen/VBoxContainer/toggleMenuButton:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("menu/baseMenuScreen/VBoxContainer/toggleMenuButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("baseMenuOpenButtonContainer:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("baseMenuOpenButtonContainer:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6ywuj"]
+resource_name = "open_pauseMenu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pauseMenu/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.478431)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("pauseMenu/pauseButton:custom_minimum_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(70, 120)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("menu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("menu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_thc07"]
+resource_name = "open_settingMenu"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("settingMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("settingMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tt35l"]
+_data = {
+&"RESET": SubResource("Animation_37co0"),
+&"close_helpMenu": SubResource("Animation_5x1nm"),
+&"close_menu": SubResource("Animation_0v8pi"),
+&"close_pauseMenu": SubResource("Animation_uwry7"),
+&"close_settingMenu": SubResource("Animation_g5bjr"),
+&"open_helpMenu": SubResource("Animation_qob4l"),
+&"open_menu": SubResource("Animation_ng0uy"),
+&"open_pauseMenu": SubResource("Animation_6ywuj"),
+&"open_settingMenu": SubResource("Animation_thc07")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_buw4l"]
+texture = ExtResource("1_mr5hi")
+region_rect = Rect2(245, 2, 7, 12)
+
 [node name="inGameUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -90,14 +647,27 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="popupMenu" type="MarginContainer" parent="."]
+[node name="popupMenu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "help_menu_screen", "setting_menu_screen", "pause_menu_screen", "open_menu_button", "close_menu_button", "open_help_button", "close_help_button", "open_settings_button", "close_settings_button", "open_pause_button", "close_pause_button", "open_quit_button")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sis81")
+script = ExtResource("1_o8w1j")
+menu_screen = NodePath("menu")
+help_menu_screen = NodePath("helpMenu")
+setting_menu_screen = NodePath("settingMenu")
+pause_menu_screen = NodePath("pauseMenu")
+open_menu_button = NodePath("baseMenuOpenButtonContainer/toggleMenuButton")
+close_menu_button = NodePath("menu/baseMenuScreen/VBoxContainer/toggleMenuButton")
+open_help_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/toggleHelpMenuButton")
+close_help_button = NodePath("helpMenu/exitButton/MarginContainer/toggleHelpMenuButton")
+open_settings_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/toggleSettingMenuButton")
+close_settings_button = NodePath("settingMenu/exitButton/MarginContainer/toggleSettingMenuButton")
+open_pause_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/pauseButton")
+close_pause_button = NodePath("pauseMenu/pauseButton")
+open_quit_button = NodePath("menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2/quitButton")
 
 [node name="menu" type="VBoxContainer" parent="popupMenu"]
 visible = false
@@ -116,6 +686,7 @@ layout_mode = 2
 theme_override_constants/separation = 3
 
 [node name="toggleMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(50, 4)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -157,6 +728,7 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="toggleHelpMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -166,6 +738,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_00aw2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_00aw2")
 
 [node name="pauseButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -179,6 +752,7 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="toggleSettingMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -188,6 +762,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_ebu2c")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ebu2c")
 
 [node name="quitButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -197,12 +772,15 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_hjk8w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hjk8w")
 
 [node name="statDisplayContainer" type="VBoxContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_constants/separation = 0
+script = ExtResource("3_2dq48")
 
 [node name="coinDisplay" type="Label" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
+texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
@@ -212,6 +790,7 @@ theme_override_font_sizes/font_size = 30
 text = "COINS:"
 
 [node name="scoreDisplay" type="Label" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
+texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
@@ -230,6 +809,7 @@ size_flags_vertical = 8
 theme_override_constants/separation = 20
 
 [node name="toggleMenuButton" type="Button" parent="popupMenu/baseMenuOpenButtonContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(50, 4)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -243,6 +823,7 @@ layout_mode = 2
 
 [node name="helpMenu" type="MarginContainer" parent="popupMenu"]
 visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -347,6 +928,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_7gj3w")
 
 [node name="settingMenu" type="MarginContainer" parent="popupMenu"]
 visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -486,6 +1068,28 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_5dodw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7gj3w")
 theme_override_styles/hover = SubResource("StyleBoxTexture_7gj3w")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="popupMenu"]
+libraries = {
+&"": SubResource("AnimationLibrary_tt35l")
+}
+
+[node name="pauseMenu" type="MarginContainer" parent="popupMenu"]
+visible = false
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="popupMenu/pauseMenu"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.478431)
+
+[node name="pauseButton" type="Button" parent="popupMenu/pauseMenu"]
+custom_minimum_size = Vector2(70, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_buw4l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_buw4l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_buw4l")
+
 [connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
 [connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/toggleHelpMenuButton" to="popupMenu" method="_on_toggle_help_menu_button_pressed"]
 [connection signal="pressed" from="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer/pauseButton" to="popupMenu" method="_on_pause_button_pressed"]
@@ -494,3 +1098,4 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_7gj3w")
 [connection signal="pressed" from="popupMenu/baseMenuOpenButtonContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
 [connection signal="pressed" from="popupMenu/helpMenu/exitButton/MarginContainer/toggleHelpMenuButton" to="popupMenu" method="_on_toggle_help_menu_button_pressed"]
 [connection signal="pressed" from="popupMenu/settingMenu/exitButton/MarginContainer/toggleSettingMenuButton" to="popupMenu" method="_on_toggle_setting_menu_button_pressed"]
+[connection signal="pressed" from="popupMenu/pauseMenu/pauseButton" to="popupMenu" method="_on_pause_button_pressed"]
