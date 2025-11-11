@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfg41if8krx54"]
+
+[ext_resource type="Texture2D" uid="uid://chk0jd5ji7b6f" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Idle_with_shadow.png" id="1_tuf74"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vilii"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugb83"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1y77"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3lil"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(256, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_seibo"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(320, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlvxm"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(384, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rd5vd"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(448, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn3qm"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(512, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf3s5"]
+atlas = ExtResource("1_tuf74")
+region = Rect2(576, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iujhe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vilii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugb83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1y77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3lil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_seibo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlvxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rd5vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jn3qm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf3s5")
+}],
+"loop": true,
+"name": &"tes",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h3lsy"]
+height = 28.0
+
+[node name="playertest" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -3)
+sprite_frames = SubResource("SpriteFrames_iujhe")
+animation = &"tes"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_h3lsy")
+disabled = true
