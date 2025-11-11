@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnckd08411fky"]
+
+[ext_resource type="PackedScene" uid="uid://dokmmxit2cis4" path="res://WORLD.3/world.tscn" id="1_tkuyb"]
+[ext_resource type="PackedScene" uid="uid://d3illdaxl1oel" path="res://Penjaga/character_body_2d.tscn" id="2_girlp"]
+
+[node name="World" instance=ExtResource("1_tkuyb")]
+
+[node name="CharacterBody2D" parent="." index="1"]
+position = Vector2(400, 536)
+
+[node name="CharacterBody2D3" parent="." index="3" instance=ExtResource("2_girlp")]
+position = Vector2(-468, 54)
