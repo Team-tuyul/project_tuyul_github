@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Project_tuyul"
+<<<<<<< HEAD
 run/main_scene="uid://6i1pdj0xkmop"
+=======
+run/main_scene="uid://dokmmxit2cis4"
+>>>>>>> c78fbb43f66c759eb8b8cf321716e0f919dc0c41
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
