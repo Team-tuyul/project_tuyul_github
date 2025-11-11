@@ -1,11 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://brm4yawvc1sh0"]
+[gd_scene load_steps=2 format=3 uid="uid://brm4yawvc1sh0"]
 
 [ext_resource type="PackedScene" uid="uid://diqg31ir4by5o" path="res://asset game tuyul/tuyul_mc_unarmed/character_body_2d.tscn" id="1_sf0xg"]
-[ext_resource type="PackedScene" uid="uid://d1x2nnd11j76d" path="res://asset game tuyul/item_interaction/item_gold.tscn" id="2_q843r"]
 
 [node name="dunia" type="Node2D"]
-
-[node name="Area2D" parent="." instance=ExtResource("2_q843r")]
-position = Vector2(152, 2)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_sf0xg")]

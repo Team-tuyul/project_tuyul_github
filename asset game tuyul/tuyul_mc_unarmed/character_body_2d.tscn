@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://diqg31ir4by5o"]
+[gd_scene load_steps=121 format=3 uid="uid://diqg31ir4by5o"]
 
 [ext_resource type="Script" uid="uid://ck1aqnc1keet5" path="res://character_body_2d.gd" id="1_qua5r"]
 [ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Death_with_shadow.png" id="2_msa7x"]
