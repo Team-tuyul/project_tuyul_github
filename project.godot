@@ -14,6 +14,7 @@ config/name="Project_tuyul"
 run/main_scene="uid://b1ovyxo4iawh6"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<Updatedupstreamrun/main_scene="uid://cdsgtxyai6wih"
 
 [dotnet]
 
