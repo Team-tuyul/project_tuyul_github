@@ -8,8 +8,7 @@ const SPEED_LARI = 200
 
 var arah = "bawah"
 var is_attacking = false 
-var has_sword = false 
-
+var has_sword = false
 
 func _ready():
 	camera.make_current() 
