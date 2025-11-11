@@ -42,3 +42,9 @@ func set_game_paused(is_paused: bool):
 			ui_instance.call_deferred("hide_pause_menu")
 	
 	print("Game status diubah: Paused = ", is_paused)
+# Fungsi yang akan dipanggil saat sinyal dari UI diterima
+func _on_ui_pause_requested():
+	set_game_paused(true)
+
+func _on_ui_resume_requested():
+	set_game_paused(false)

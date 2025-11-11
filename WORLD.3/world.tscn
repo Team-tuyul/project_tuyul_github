@@ -1,9 +1,10 @@
-[gd_scene load_steps=38 format=4 uid="uid://cqu0sy21xo3hp"]
+[gd_scene load_steps=39 format=4 uid="uid://cqu0sy21xo3hp"]
 
 [ext_resource type="Texture2D" uid="uid://bxhk3hwwbxe61" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_coasts_animation.png" id="1_3fgba"]
 [ext_resource type="Script" uid="uid://6g36sa8lomnw" path="res://WORLD.3/uiscript.gd" id="1_fdxn7"]
 [ext_resource type="PackedScene" uid="uid://cisn51rjkf65d" path="res://uidesign5/canvas_layer.tscn" id="2_i5s6l"]
 [ext_resource type="Texture2D" uid="uid://dg6aepdtn6mgt" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_floor.png" id="2_nf4hx"]
+[ext_resource type="Script" uid="uid://cgxhva2tlefrf" path="res://uidesign5/canvas_layer.gd" id="3_i5s6l"]
 [ext_resource type="Texture2D" uid="uid://cmf4leaoefynk" path="res://asset game tuyul/craftpix-net-169442-free-2d-top-down-pixel-dungeon-asset-pack/PNG/decorative_cracks_walls.png" id="3_mcpc1"]
 [ext_resource type="Texture2D" uid="uid://bc81x16b1lt2j" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/1.png" id="3_r0dxk"]
 [ext_resource type="Texture2D" uid="uid://b0bp8d3murm35" path="res://asset game tuyul/craftpix-net-280167-free-level-map-pixel-art-assets-pack/2 Objects/Houses/2.png" id="4_co4d8"]
@@ -2755,6 +2756,7 @@ sources/16 = SubResource("TileSetAtlasSource_esu2o")
 script = ExtResource("1_fdxn7")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_i5s6l")]
+script = ExtResource("3_i5s6l")
 
 [node name="TileMap" type="Node2D" parent="."]
 texture_filter = 1
