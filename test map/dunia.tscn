@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvmjdvlc1vj6"]
+
+[ext_resource type="PackedScene" uid="uid://b1ovyxo4iawh6" path="res://test map/character_body_2d.tscn" id="1_sf0xg"]
+[ext_resource type="PackedScene" uid="uid://ja3jld4ec5pm" path="res://looting/area_2d.tscn" id="2_q843r"]
+
+[node name="dunia" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_sf0xg")]
+
+[node name="ItemPickUp" parent="." instance=ExtResource("2_q843r")]
+position = Vector2(150, 4)
