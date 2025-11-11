@@ -9,12 +9,17 @@ const SPEED_STEALTH = 50
 
 var arah = "bawah"  # arah terakhir pemain
 var is_stealth = false #status mode stealth
+var is_dead = false
+var is_hit = false
 
 func _ready():
 	# Mengaktifkan kamera.
 	camera.make_current() 
 
 func _physics_process(_delta):
+	if is_dead or is_hit:
+		return
+		
 	cek_input_stealth()
 	player_movement()
 	atur_animasi()
@@ -116,3 +121,39 @@ func atur_visual():
 		sprite.modulate = Color(1, 1, 1, 0.7)  # sedikit transparan
 	else:
 		sprite.modulate = Color(1,1,1,1)
+
+func on_detected_by_penjaga(direction: String) -> void:
+	if is_dead:
+		return
+	is_hit = true
+	
+	match direction:
+		"atas":
+			sprite.play("kena_hit_atas")
+		"bawah":
+			sprite.play("kena_hit_bawah")
+		"kanan":
+			sprite.flip_h = false
+			sprite.play("kena_hit")
+		"kiri":
+			sprite.flip_h = true
+			sprite.play("kena_hit")
+
+	await sprite.animation_finished
+	is_hit = false
+	_die(direction)
+
+
+func _die(direction: String) -> void:
+	is_dead = true
+	match direction:
+		"atas":
+			sprite.play("mati_atas")
+		"bawah":
+			sprite.play("mati_bawah")
+		"kanan":
+			sprite.flip_h = false
+			sprite.play("mati")
+		"kiri":
+			sprite.flip_h = true
+			sprite.play("mati")
