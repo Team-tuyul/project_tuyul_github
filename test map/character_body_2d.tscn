@@ -715,7 +715,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle_atas",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -756,7 +756,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle_bawah",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -797,7 +797,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle_sword",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1351,7 +1351,7 @@ script = ExtResource("1_0etvg")
 texture_filter = 1
 scale = Vector2(1.0952381, 1)
 sprite_frames = SubResource("SpriteFrames_b6muj")
-animation = &"run_attack_bawah"
+animation = &"idle_sword"
 autoplay = "idle_bawah"
 
 [node name="Camera2D" type="Camera2D" parent="."]
