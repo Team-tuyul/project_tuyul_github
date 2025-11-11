@@ -10,8 +10,8 @@ var max_health = 1000
 var health = 1000
 var attack_min = 10
 var attack_max = 20
-var speed = 60
-var chase_speed = 60
+var speed = 30
+var chase_speed = 30
 var attack_cooldown = 8.0
 
 # === INTERNAL STATE ===
@@ -25,7 +25,7 @@ var rng = RandomNumberGenerator.new()
 # === KONSTANTA PERILAKU ===
 const RANDOM_WALK_RADIUS = 250
 const IDLE_DURATION = 2.5
-const STOP_DISTANCE = 5.0 # ❗ Anti-sticky jarak aman agar tidak nempel
+const STOP_DISTANCE = 5.0 #  Anti-sticky jarak aman agar tidak nempel
 
 func _ready():
 	rng.randomize()

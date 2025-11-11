@@ -1348,7 +1348,7 @@ script = ExtResource("1_fhi6y")
 texture_filter = 1
 scale = Vector2(1.0952381, 1)
 sprite_frames = SubResource("SpriteFrames_b6muj")
-animation = &"jalan"
+animation = &"idle_sword"
 autoplay = "idle_bawah"
 
 [node name="Camera2D" type="Camera2D" parent="."]
