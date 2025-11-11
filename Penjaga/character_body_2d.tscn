@@ -1071,7 +1071,7 @@ script = ExtResource("1_8htl7")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ml05e")
 animation = &"idle_bawah"
-frame_progress = 0.46651393
+frame_progress = 0.20807329
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8htl7")

@@ -5,7 +5,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_3l3yo")]
-position = Vector2(575, 318)
+position = Vector2(579, 317)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("1_3l3yo")]
-position = Vector2(575, 318)
+position = Vector2(579, 317)

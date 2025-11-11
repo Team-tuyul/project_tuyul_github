@@ -1284,8 +1284,8 @@ script = ExtResource("1_1ciif")
 texture_filter = 1
 scale = Vector2(0.907, 0.8)
 sprite_frames = SubResource("SpriteFrames_dvrhv")
-animation = &"seranglari_atas"
-frame_progress = 0.80887955
+animation = &"idle_bawah"
+frame_progress = 0.8660928
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(3, -3)
