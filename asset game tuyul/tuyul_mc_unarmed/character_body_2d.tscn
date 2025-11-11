@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://diqg31ir4by5o"]
+[gd_scene load_steps=121 format=3 uid="uid://diqg31ir4by5o"]
 
 [ext_resource type="Script" uid="uid://ck1aqnc1keet5" path="res://character_body_2d.gd" id="1_qua5r"]
 [ext_resource type="Texture2D" uid="uid://d1acffysc34tl" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Death_with_shadow.png" id="2_msa7x"]
@@ -431,6 +431,30 @@ region = Rect2(320, 0, 64, 64)
 atlas = ExtResource("2_msa7x")
 region = Rect2(384, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2x6pq"]
+atlas = ExtResource("6_8ctgo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rfjj"]
+atlas = ExtResource("6_8ctgo")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fp73"]
+atlas = ExtResource("6_8ctgo")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lji0t"]
+atlas = ExtResource("6_8ctgo")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbkp3"]
+atlas = ExtResource("6_8ctgo")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkafs"]
+atlas = ExtResource("6_8ctgo")
+region = Rect2(320, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_wbwqr"]
 animations = [{
 "frames": [{
@@ -472,7 +496,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -489,7 +513,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_atas",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -530,7 +554,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle_bawah",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -872,9 +896,27 @@ animations = [{
 "name": &"stealth_atas",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2x6pq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rfjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fp73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lji0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbkp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkafs")
+}],
 "loop": true,
-"name": &"steatlh_bawah",
+"name": &"stealth_bawah",
 "speed": 5.0
 }]
 
@@ -890,7 +932,8 @@ texture_filter = 1
 position = Vector2(1.4210855e-14, -0.9999995)
 scale = Vector2(2.609375, 2.484375)
 sprite_frames = SubResource("SpriteFrames_wbwqr")
-animation = &"steatlh_bawah"
+animation = &"idle_bawah"
+frame_progress = 0.37588957
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
