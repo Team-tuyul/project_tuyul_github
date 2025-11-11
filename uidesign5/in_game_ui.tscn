@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="2_a2rtn"]
 [ext_resource type="Script" uid="uid://cprjh2wh320tp" path="res://uidesign5/stat_display_menu_manger.gd" id="3_2dq48"]
 [ext_resource type="FontFile" uid="uid://iyko7vrordi8" path="res://uidesign5/toybox_font/ToyBox.ttf" id="3_5rjt0"]
-[ext_resource type="Texture2D" uid="uid://keklegn3ussx" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/Sprite sheets/sampleimage.jpg" id="6_6phbl"]
+[ext_resource type="Texture2D" uid="uid://drmph5ftcoha8" path="res://asset game tuyul/Screenshot 2025-11-11 233137.png" id="6_kohhf"]
 [ext_resource type="Texture2D" uid="uid://c6o6b1nb8x41y" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/audio-off-icon.png" id="7_c0eun"]
 [ext_resource type="Texture2D" uid="uid://b0q4ri132mo1d" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/audio-on-icon.png" id="8_g0y6w"]
 [ext_resource type="Texture2D" uid="uid://btp5k3avs4lq0" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/brightness-off-icon.png" id="9_cirph"]
@@ -640,6 +640,7 @@ texture = ExtResource("1_mr5hi")
 region_rect = Rect2(245, 2, 7, 12)
 
 [node name="inGameUI" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -686,6 +687,7 @@ layout_mode = 2
 theme_override_constants/separation = 3
 
 [node name="toggleMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer"]
+process_mode = 3
 texture_filter = 1
 custom_minimum_size = Vector2(50, 4)
 layout_mode = 2
@@ -728,6 +730,7 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="toggleHelpMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+process_mode = 3
 texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
@@ -738,6 +741,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_00aw2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_00aw2")
 
 [node name="pauseButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+process_mode = 3
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -751,6 +755,7 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="toggleSettingMenuButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+process_mode = 3
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -760,6 +765,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_ebu2c")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ebu2c")
 
 [node name="quitButton" type="Button" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/bottomButtonContainer2"]
+process_mode = 3
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -803,6 +809,7 @@ size_flags_vertical = 8
 theme_override_constants/separation = 20
 
 [node name="toggleMenuButton" type="Button" parent="popupMenu/baseMenuOpenButtonContainer"]
+process_mode = 3
 custom_minimum_size = Vector2(50, 4)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -874,14 +881,16 @@ theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("3_5rjt0")
 theme_override_font_sizes/font_size = 13
-text = "Lorem ipsum dolor
-sit amet, consectetur 
-adipiscing elit, sed do 
-eiusmod tempor
-incididunt ut labore 
-et dolore magna 
-aliqua. Ut enim ad 
-minim veniam. "
+text = "Game ini menceritakan
+tentang
+bagaimana aksi dari 
+seorang tuyul
+yang melawan para 
+goblin dan 
+makhluk lainnya 
+untuk menggerakkan player kamu bisa menggunakan arrow key ←→↑↓"
+autowrap_mode = 3
+justification_flags = 161
 
 [node name="text1Display2" type="Label" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -890,13 +899,18 @@ theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("3_5rjt0")
 theme_override_font_sizes/font_size = 13
-text = "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+text = "
+Sebisa mungkin hindari makhluk
+yang akan menyerangmu 
+
+gunakan pedang untuk melawan mereka, pedang itu mungkin tersembunyi di hutan"
 autowrap_mode = 3
+justification_flags = 161
 
 [node name="TextureRect" type="TextureRect" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("6_6phbl")
+texture = ExtResource("6_kohhf")
 expand_mode = 1
 stretch_mode = 4
 
@@ -911,6 +925,7 @@ theme_override_constants/margin_top = -10
 theme_override_constants/margin_right = -9
 
 [node name="toggleHelpMenuButton" type="Button" parent="popupMenu/helpMenu/exitButton/MarginContainer"]
+process_mode = 3
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1053,6 +1068,7 @@ theme_override_constants/margin_top = -10
 theme_override_constants/margin_right = -9
 
 [node name="toggleSettingMenuButton" type="Button" parent="popupMenu/settingMenu/exitButton/MarginContainer"]
+process_mode = 3
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1075,6 +1091,7 @@ layout_mode = 2
 color = Color(0, 0, 0, 0.478431)
 
 [node name="pauseButton" type="Button" parent="popupMenu/pauseMenu"]
+process_mode = 3
 custom_minimum_size = Vector2(70, 120)
 layout_mode = 2
 size_flags_horizontal = 4
