@@ -724,7 +724,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle_atas",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -765,7 +765,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle_bawah",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -806,7 +806,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"idle_sword",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -829,7 +829,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jalan",
-"speed": 6.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -852,7 +852,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jalan_atas",
-"speed": 6.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -875,7 +875,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jalan_bawah",
-"speed": 6.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -895,7 +895,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"kena_hit",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -915,7 +915,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"kena_hit_atas",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -935,7 +935,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"kena_hit_bawah",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1364,8 +1364,10 @@ texture_filter = 1
 position = Vector2(1, 23)
 scale = Vector2(1.0952381, 1)
 sprite_frames = SubResource("SpriteFrames_b6muj")
-animation = &"kena_hit_bawah"
+animation = &"run_attack_bawah"
 autoplay = "idle_bawah"
+frame = 7
+frame_progress = 1.0
 offset = Vector2(0, -28)
 
 [node name="Camera2D" type="Camera2D" parent="."]

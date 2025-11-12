@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const SPEED_JALAN = 60
-const SPEED_LARI = 150
-const MAX_HEALTH = 100
+const SPEED_JALAN = 50
+const SPEED_LARI = 120
+const MAX_HEALTH = 120
 
 @onready var sprite = $AnimatedSprite2D
 @onready var camera = $Camera2D

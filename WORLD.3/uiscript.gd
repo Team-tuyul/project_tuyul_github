@@ -1,6 +1,8 @@
 extends Node2D
 
-@onready var bgm = $AudioStreamPlayer2D
+@onready var bgm_lama = $AudioStreamPlayer2D # BGM LAMA (Asumsi Bus Master/Default)
+@onready var bgm_hutan = $AudioStreamPlayer2D2 # ⚡️ BARU: BGM untuk Bus 'hutan'
+
 # Ganti path ini dengan lokasi file scene UI CanvasLayer Anda.
 const UI_SCENE = preload("res://uidesign5/canvas_layer.tscn")
 
@@ -29,8 +31,19 @@ func _ready():
 		print("ERROR: Player lama tidak ditemukan atau tidak memiliki sinyal 'request_scene_change'.")
 	
 	# 4. Mulai BGM
-	bgm.play()
-	bgm.stream.loop = true
+	
+	# BGM LAMA (Jika masih diperlukan)
+	if bgm_lama:
+		if bgm_lama.stream:
+			bgm_lama.stream.loop = true
+		bgm_lama.play()
+		
+	# ⚡️ BARU: Mulai BGM Hutan
+	if bgm_hutan:
+		if bgm_hutan.stream:
+			bgm_hutan.stream.loop = true
+		bgm_hutan.play()
+		print("BGM Hutan (AudioStreamPlayer2D2) telah dimainkan.")
 
 # =========================================================================
 # FUNGSI PENGGANTIAN KARAKTER
