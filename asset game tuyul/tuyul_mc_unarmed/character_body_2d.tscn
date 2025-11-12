@@ -926,11 +926,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ohnj8"]
-radius = 14.0
-height = 42.0
+height = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qua5r"]
-radius = 66.007576
+radius = 44.04543
 
 [node name="Player_unarmed" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -938,10 +937,10 @@ script = ExtResource("1_qua5r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0.99999994, -2.9999998)
-scale = Vector2(2.101, 2)
+position = Vector2(1, 23)
 sprite_frames = SubResource("SpriteFrames_wbwqr")
 animation = &"jalan_bawah"
+offset = Vector2(0, -28)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
