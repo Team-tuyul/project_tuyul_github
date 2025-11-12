@@ -950,9 +950,7 @@ shape = SubResource("CapsuleShape2D_ohnj8")
 script = ExtResource("7_msa7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_interaction_item"]
-
 shape = SubResource("CircleShape2D_qua5r")
-
 
 [connection signal="area_entered" from="player_interaction_item" to="." method="_on_player_interaction_item_area_entered"]
 [connection signal="area_exited" from="player_interaction_item" to="." method="_on_player_interaction_item_area_exited"]
