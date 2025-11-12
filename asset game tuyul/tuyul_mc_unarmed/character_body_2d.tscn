@@ -922,7 +922,6 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ohnj8"]
-
 radius = 18.0
 height = 62.84
 
@@ -930,13 +929,12 @@ height = 62.84
 radius = 66.007576
 
 [node name="Player_unarmed" type="CharacterBody2D"]
-
 script = ExtResource("1_qua5r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, -2)
-scale = Vector2(2, 1.904)
+position = Vector2(1.4210855e-14, -0.9999995)
+scale = Vector2(2.609375, 2.484375)
 sprite_frames = SubResource("SpriteFrames_wbwqr")
 animation = &"idle_bawah"
 frame_progress = 0.37588957

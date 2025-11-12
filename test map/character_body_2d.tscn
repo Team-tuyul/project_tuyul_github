@@ -1,6 +1,6 @@
 [gd_scene load_steps=121 format=3 uid="uid://b1ovyxo4iawh6"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_vl1tq"]
+[ext_resource type="Script" uid="uid://ck1aqnc1keet5" path="res://character_body_2d.gd" id="1_vl1tq"]
 [ext_resource type="Texture2D" uid="uid://cks1cnd1sxyll" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Idle_with_shadow.png" id="2_0823a"]
 [ext_resource type="Texture2D" uid="uid://bomgetcywgjcr" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Walk_with_shadow.png" id="3_rstch"]
 [ext_resource type="Texture2D" uid="uid://dxghgmdhlioe1" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Hurt_with_shadow.png" id="4_oifbo"]
@@ -921,21 +921,22 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ohnj8"]
-radius = 12.0
-height = 46.0
+radius = 16.79
+height = 62.84
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_vl1tq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1, -2)
-scale = Vector2(2, 1.904)
+position = Vector2(1.4210855e-14, -0.9999995)
+scale = Vector2(2.609375, 2.484375)
 sprite_frames = SubResource("SpriteFrames_wbwqr")
-animation = &"idle_bawah"
-frame_progress = 0.37588957
+animation = &"idle"
+frame_progress = 0.6319993
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ohnj8")
+disabled = true

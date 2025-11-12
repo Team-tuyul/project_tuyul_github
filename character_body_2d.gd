@@ -6,8 +6,6 @@ const SPEED_STEALTH = 50
 
 @onready var sprite = $AnimatedSprite2D
 @onready var camera = $Camera2D
-@onready var interaction = $player_interaction_item
-
 
 var arah = "bawah"  # arah terakhir pemain
 var is_stealth = false #status mode stealth
@@ -21,10 +19,6 @@ func _ready():
 func _physics_process(_delta):
 	if is_dead or is_hit:
 		return
-	
-	if Input.is_action_just_pressed("interact"):
-		if interaction:
-			interaction.try_pickup_item()
 		
 	cek_input_stealth()
 	player_movement()
