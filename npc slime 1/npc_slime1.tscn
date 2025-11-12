@@ -1,8 +1,9 @@
-[gd_scene load_steps=49 format=3 uid="uid://10eara27aovv"]
+[gd_scene load_steps=50 format=3 uid="uid://10eara27aovv"]
 
 [ext_resource type="Texture2D" uid="uid://dqexvmgf2a3xl" path="res://asset game tuyul/craftpix-net-788364-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/With_shadow/Slime1_Idle_with_shadow.png" id="1_6l2gj"]
 [ext_resource type="Script" uid="uid://3x76ntukc6fe" path="res://npc slime 1/npc_slime_1.gd" id="1_l1rmp"]
 [ext_resource type="Texture2D" uid="uid://cy76fmehyslul" path="res://asset game tuyul/craftpix-net-788364-free-slime-mobs-pixel-art-top-down-sprite-pack/PNG/Slime1/With_shadow/Slime1_Walk_with_shadow.png" id="2_l1rmp"]
+[ext_resource type="AudioStream" uid="uid://ddu2aoxmdihgf" path="res://Theme Song/slime sound.mp3" id="2_y7qoa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7qoa"]
 radius = 7.0
@@ -340,7 +341,12 @@ size = Vector2(39, 20)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_l1rmp")
 
+[node name="Audio_Jalan" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_y7qoa")
+max_distance = 100.0
+
 [node name="Area Aman" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_y7qoa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

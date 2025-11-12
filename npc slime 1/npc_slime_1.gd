@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
+@onready var audio_jalan = $Audio_Jalan  # sound effect langkah
 
 @export var speed: float = 15.0
 @export var walk_distance: float = 30.0
@@ -24,6 +25,7 @@ func _ready():
 func _physics_process(delta):
 	if is_idling:
 		velocity = Vector2.ZERO
+		_stop_sound()  # pastikan suara berhenti pas idle
 		idle_timer += delta
 
 		# idle awal
@@ -55,8 +57,10 @@ func _physics_process(delta):
 			dir = dir.normalized()
 			velocity = dir * speed
 			_play_jalan(dir)
+			_play_sound()  # nyalakan suara langkah
 		else:
 			velocity = Vector2.ZERO
+			_stop_sound()  # berhenti jalan = hentikan suara
 
 			# balik arah kalau baru ke kanan
 			if patrol_direction == 1:
@@ -81,3 +85,12 @@ func _play_jalan(dir: Vector2):
 func _play_idle_bawah():
 	if anim.animation != "idle_bawah":
 		anim.play("idle_bawah")
+
+# --- Sound kontrol ---
+func _play_sound():
+	if not audio_jalan.playing:
+		audio_jalan.play()
+
+func _stop_sound():
+	if audio_jalan.playing:
+		audio_jalan.stop()

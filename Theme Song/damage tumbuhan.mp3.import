@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://thschtdrxs8o"
+path="res://.godot/imported/damage tumbuhan.mp3-23dd56c2239d1c47089c66627c4ca56f.mp3str"
+
+[deps]
+
+source_file="res://Theme Song/damage tumbuhan.mp3"
+dest_files=["res://.godot/imported/damage tumbuhan.mp3-23dd56c2239d1c47089c66627c4ca56f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

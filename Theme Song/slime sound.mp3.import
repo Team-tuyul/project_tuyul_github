@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddu2aoxmdihgf"
+path="res://.godot/imported/slime sound.mp3-178575d65c780710b8b2142193cf40e2.mp3str"
+
+[deps]
+
+source_file="res://Theme Song/slime sound.mp3"
+dest_files=["res://.godot/imported/slime sound.mp3-178575d65c780710b8b2142193cf40e2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

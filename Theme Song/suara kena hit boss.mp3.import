@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bet0bo1slw31y"
+path="res://.godot/imported/suara kena hit boss.mp3-e2956c7ed6161c8ef79a817bbc17d9f9.mp3str"
+
+[deps]
+
+source_file="res://Theme Song/suara kena hit boss.mp3"
+dest_files=["res://.godot/imported/suara kena hit boss.mp3-e2956c7ed6161c8ef79a817bbc17d9f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

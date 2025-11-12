@@ -1351,9 +1351,12 @@ sprite_frames = SubResource("SpriteFrames_b6muj")
 animation = &"idle_sword"
 autoplay = "idle_bawah"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -1)
+autoplay = true
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_6g6p1")
