@@ -1,4 +1,4 @@
-[gd_scene load_steps=188 format=3 uid="uid://kg8yjvr4hivk"]
+[gd_scene load_steps=190 format=3 uid="uid://kg8yjvr4hivk"]
 
 [ext_resource type="Script" uid="uid://5o77dd2l2evj" path="res://script_karakter/tuyul_swordd.gd" id="1_oifbo"]
 [ext_resource type="Texture2D" uid="uid://chk0jd5ji7b6f" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Idle_with_shadow.png" id="2_1kp85"]
@@ -12,6 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://l2d1arylmt6t" path="res://asset game tuyul/audio/step player.mp3" id="10_6r1fv"]
 [ext_resource type="AudioStream" uid="uid://bdyxqxqeqfmab" path="res://asset game tuyul/audio/running-on-dirt-road-345729.mp3" id="11_enlsd"]
 [ext_resource type="AudioStream" uid="uid://boc54hrkvi1bx" path="res://asset game tuyul/audio/sword slice player.mp3" id="12_enlsd"]
+[ext_resource type="AudioStream" uid="uid://c62m67ij2coy7" path="res://asset game tuyul/audio/grunt1-68324.mp3" id="13_qgupa"]
+[ext_resource type="AudioStream" uid="uid://cv1347cugrjb0" path="res://asset game tuyul/audio/grunt2-84534.mp3" id="14_imvvu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6muj"]
 atlas = ExtResource("2_1kp85")
@@ -889,7 +891,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"kena_hit",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -909,7 +911,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"kena_hit_atas",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -929,7 +931,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"kena_hit_bawah",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1354,7 +1356,7 @@ script = ExtResource("1_oifbo")
 texture_filter = 1
 scale = Vector2(1.0952381, 1)
 sprite_frames = SubResource("SpriteFrames_b6muj")
-animation = &"sword_animation_up"
+animation = &"kena_hit_bawah"
 autoplay = "idle_bawah"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1380,3 +1382,9 @@ stream = ExtResource("11_enlsd")
 
 [node name="AttackSound_player" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_enlsd")
+
+[node name="HitSound_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_qgupa")
+
+[node name="DeathSound_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_imvvu")

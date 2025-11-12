@@ -2,66 +2,136 @@ extends CharacterBody2D
 
 const SPEED_JALAN = 100
 const SPEED_LARI = 200
+const MAX_HEALTH = 100
 
 @onready var sprite = $AnimatedSprite2D
 @onready var camera = $Camera2D
 @onready var walk_sound = $FootSteep_player
 @onready var run_sound = $RunSteep_player
-@onready var attack_sound = $AttackSound_player  
+@onready var attack_sound = $AttackSound_player
+@onready var hit_sound = $HitSound_player
+@onready var death_sound = $DeathSound_player
 
 var arah = "bawah"
 var is_attacking = false 
 var has_sword = false
 var step_timer = 0.0
+var health = MAX_HEALTH
+var is_dead = false
+var is_hit = false
 
 func _ready():
-	camera.make_current() 
+	camera.make_current()
 
 func _physics_process(_delta):
-	player_movement() 
-	
+	if is_dead:
+		return  # tidak bisa apa-apa kalau sudah mati
+
+	# 💥 Untuk uji coba kena damage (hapus nanti setelah tes)
+	if Input.is_action_just_pressed("ui_accept"):
+		take_damage(30)
+
+	player_movement()
+
 	if is_attacking:
 		update_attack_animation()
+	elif is_hit:
+		return # jangan ubah animasi saat kena hit
 	else:
 		atur_animasi()
-	
+
 	atur_suara_langkah()
 	move_and_slide()
 
-# ------------------------------
+# ----------------------------------------------------
+# 💥 FUNGSI KENA DAMAGE
+# ----------------------------------------------------
+func take_damage(amount):
+	if is_dead or is_hit:
+		return
+
+	health -= amount
+	is_hit = true
+
+	# mainkan suara kena hit
+	hit_sound.play()
+
+	# pilih animasi kena hit sesuai arah
+	match arah:
+		"atas":
+			sprite.play("kena_hit_atas")
+		"bawah":
+			sprite.play("kena_hit_bawah")
+		_:
+			sprite.play("kena_hit")
+
+	# jika darah habis, mati
+	if health <= 0:
+		die()
+	else:
+		# setelah animasi hit selesai, lanjut lagi
+		sprite.animation_finished.connect(_on_hit_finished)
+
+# ----------------------------------------------------
+# ☠️ FUNGSI MATI
+# ----------------------------------------------------
+func die():
+	is_dead = true
+	is_hit = false
+	velocity = Vector2.ZERO
+
+	death_sound.play()
+
+	# mainkan animasi mati sesuai arah
+	match arah:
+		"atas":
+			sprite.play("mati_atas")
+		"bawah":
+			sprite.play("mati_bawah")
+		_:
+			sprite.play("mati")
+
+# ----------------------------------------------------
+# 🔁 FUNGSI SAAT ANIMASI HIT SELESAI
+# ----------------------------------------------------
+func _on_hit_finished():
+	if sprite.animation_finished.is_connected(_on_hit_finished):
+		sprite.animation_finished.disconnect(_on_hit_finished)
+	is_hit = false
+
+# ----------------------------------------------------
 # 🦶 SUARA LANGKAH
-# ------------------------------
+# ----------------------------------------------------
 func atur_suara_langkah():
-	if velocity == Vector2.ZERO:
-		# Kalau diam → hentikan semua suara
+	if velocity == Vector2.ZERO or is_attacking or is_hit or is_dead:
 		if walk_sound.playing:
 			walk_sound.stop()
 		if run_sound.playing:
 			run_sound.stop()
 	else:
-		# Kalau bergerak → pilih suara jalan atau lari
 		if velocity.length() > SPEED_JALAN + 10:
-			# Lari
 			if not run_sound.playing:
 				run_sound.play()
 			if walk_sound.playing:
 				walk_sound.stop()
 		else:
-			# Jalan
 			if not walk_sound.playing:
 				walk_sound.play()
 			if run_sound.playing:
 				run_sound.stop()
 
-# ------------------------------
-# 🎮 GERAKAN & ANIMASI
-# ------------------------------
+# ----------------------------------------------------
+# 🎮 GERAKAN
+# ----------------------------------------------------
 func player_movement():
-	if Input.is_action_just_pressed("attack") and not is_attacking:
+	if is_attacking or is_hit or is_dead:
+		return
+
+	if Input.is_action_just_pressed("attack"):
 		start_attack()
-	
+
 	velocity = Vector2.ZERO
-	
+
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = 1
 		arah = "kanan"
@@ -84,22 +154,15 @@ func player_movement():
 		else:
 			velocity *= SPEED_JALAN
 
-# ------------------------------
-# ⚔️ SISTEM SERANGAN
-# ------------------------------
+# ----------------------------------------------------
+# ⚔️ SERANGAN
+# ----------------------------------------------------
 func start_attack():
-	# Putuskan sinyal lama sebelum memulai (kebersihan kode)
 	if sprite.animation_finished.is_connected(_on_attack_finished):
 		sprite.animation_finished.disconnect(_on_attack_finished)
-
-	# 🔊 Putar suara serangan di awal serangan
-	if not attack_sound.playing:
-		attack_sound.pitch_scale = randf_range(0.95, 1.05) # variasi alami
-		attack_sound.play()
-
-	# Set Status dan panggil update pertama
 	is_attacking = true
 	update_attack_animation()
+	attack_sound.play()
 
 func update_attack_animation():
 	var new_animation_name = ""
@@ -121,47 +184,35 @@ func update_attack_animation():
 		sprite.animation_finished.connect(_on_attack_finished)
 
 func _on_attack_finished():
-	if is_attacking: 
+	if is_attacking:
 		is_attacking = false
 		if sprite.animation_finished.is_connected(_on_attack_finished):
 			sprite.animation_finished.disconnect(_on_attack_finished)
-		atur_animasi() 
+		atur_animasi()
 
-# ------------------------------
+# ----------------------------------------------------
 # 🎨 ANIMASI NORMAL
-# ------------------------------
+# ----------------------------------------------------
 func atur_animasi():
-	if is_attacking:
+	if is_attacking or is_hit or is_dead:
 		return 
 		
 	if velocity == Vector2.ZERO:
 		match arah:
-			"atas":
-				sprite.play("idle_atas")
-			"bawah":
-				sprite.play("idle_bawah")
-			"kiri", "kanan":
-				sprite.play("idle_sword")
-			_:
-				sprite.play("idle_sword")
+			"atas": sprite.play("idle_atas")
+			"bawah": sprite.play("idle_bawah")
+			"kiri", "kanan": sprite.play("idle_sword")
+			_: sprite.play("idle_sword")
 	else:
 		if velocity.length() > SPEED_JALAN + 10: 
 			match arah:
-				"atas":
-					sprite.play("lari_atas")
-				"bawah":
-					sprite.play("lari_bawah")
-				"kiri", "kanan": 
-					sprite.play("lari")
-				_:
-					sprite.play("lari")
+				"atas": sprite.play("lari_atas")
+				"bawah": sprite.play("lari_bawah")
+				"kiri", "kanan": sprite.play("lari")
+				_: sprite.play("lari")
 		else:
 			match arah:
-				"atas":
-					sprite.play("jalan_atas")
-				"bawah":
-					sprite.play("jalan_bawah")
-				"kiri", "kanan":
-					sprite.play("jalan")
-				_:
-					sprite.play("jalan")
+				"atas": sprite.play("jalan_atas")
+				"bawah": sprite.play("jalan_bawah")
+				"kiri", "kanan": sprite.play("jalan")
+				_: sprite.play("jalan")
