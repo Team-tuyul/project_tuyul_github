@@ -1,4 +1,4 @@
-[gd_scene load_steps=176 format=3 uid="uid://6i1pdj0xkmop"]
+[gd_scene load_steps=181 format=3 uid="uid://6i1pdj0xkmop"]
 
 [ext_resource type="Script" uid="uid://bf6q5vd5qf8pp" path="res://Boss/character_body_2d.gd" id="1_1ciif"]
 [ext_resource type="Texture2D" uid="uid://yvb43h7wystv" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc3/With_shadow/orc3_run_attack_with_shadow.png" id="1_somdx"]
@@ -9,6 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://csbckiljiv3fa" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc3/With_shadow/orc3_idle_with_shadow.png" id="5_yn24e"]
 [ext_resource type="Texture2D" uid="uid://bgpaksln7uasd" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc3/With_shadow/orc3_walk_with_shadow.png" id="6_l8gjf"]
 [ext_resource type="Texture2D" uid="uid://bwxhsfjjy10hx" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc3/With_shadow/orc3_run_with_shadow.png" id="7_kn1yy"]
+[ext_resource type="AudioStream" uid="uid://m0s7vug4fea" path="res://step boss.mp3" id="10_1ciif"]
+[ext_resource type="AudioStream" uid="uid://b8chkth21rit1" path="res://sword slice boss.mp3" id="11_mj6mc"]
+[ext_resource type="AudioStream" uid="uid://cgh8gjuwe45xu" path="res://running-on-dirt-road-345729.mp3" id="12_yn24e"]
+[ext_resource type="AudioStream" uid="uid://c4oxrphn7p1wj" path="res://damage-blowhole-402072.mp3" id="13_l8gjf"]
+[ext_resource type="AudioStream" uid="uid://ci8kj8g57qqes" path="res://ogre-387362.mp3" id="14_kn1yy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2rdrv"]
 atlas = ExtResource("3_1ciif")
@@ -876,7 +881,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_atas",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -905,7 +910,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_bawah",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -934,7 +939,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_kanan_kiri",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1050,7 +1055,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serang_atas",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1079,7 +1084,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serang_bawah",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1108,7 +1113,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serang_kanan_kiri",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1131,7 +1136,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serangjalan_atas",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1154,7 +1159,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serangjalan_bawah",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1177,7 +1182,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serangjalan_kanan_kiri",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1206,7 +1211,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"seranglari_atas",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1235,7 +1240,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"seranglari_bawah",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1264,44 +1269,62 @@ animations = [{
 }],
 "loop": true,
 "name": &"seranglari_kanan_kiri",
-"speed": 7.0
+"speed": 9.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gptbu"]
-height = 26.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_kn1yy"]
+radius = 6.0827627
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cx3eb"]
-radius = 53.15073
+radius = 81.3019
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bumx0"]
-radius = 29.0
-height = 58.0
+radius = 26.0
+height = 52.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_1ciif")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(1, 1)
 scale = Vector2(0.907, 0.8)
 sprite_frames = SubResource("SpriteFrames_dvrhv")
 animation = &"idle_bawah"
-frame_progress = 0.8660928
+frame_progress = 0.84069806
+offset = Vector2(0, -15)
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(3, -3)
-shape = SubResource("CapsuleShape2D_gptbu")
+y_sort_enabled = true
+shape = SubResource("CircleShape2D_kn1yy")
 debug_color = Color(0, 0.12156863, 0.92941177, 0.41960785)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_1ciif")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_mj6mc")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_yn24e")
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_l8gjf")
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_kn1yy")
 
 [node name="DeteksiPlayer" type="Area2D" parent="."]
 
 [node name="DeteksiPlayer" type="CollisionShape2D" parent="DeteksiPlayer"]
-position = Vector2(3, -2)
+position = Vector2(1, -14)
 shape = SubResource("CircleShape2D_cx3eb")
 
 [node name="Serang" type="Area2D" parent="."]
 
 [node name="Serang" type="CollisionShape2D" parent="Serang"]
-position = Vector2(3, -1)
+position = Vector2(6, -12)
 shape = SubResource("CapsuleShape2D_bumx0")
 debug_color = Color(0.96542853, 6.738305e-07, 0.49372834, 0.41960785)
 

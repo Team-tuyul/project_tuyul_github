@@ -9,4 +9,4 @@
 position = Vector2(426, 511)
 
 [node name="CharacterBody2D3" parent="." index="3" instance=ExtResource("2_087tm")]
-position = Vector2(-463, 33)
+position = Vector2(-466, 71)

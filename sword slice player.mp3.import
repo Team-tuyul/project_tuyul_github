@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cq6n8ic8sxs0g"
+path="res://.godot/imported/sword slice player.mp3-15e2ba301362cdf6aa4aca8b5c3357ab.mp3str"
+
+[deps]
+
+source_file="res://sword slice player.mp3"
+dest_files=["res://.godot/imported/sword slice player.mp3-15e2ba301362cdf6aa4aca8b5c3357ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

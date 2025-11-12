@@ -4,6 +4,9 @@ extends CharacterBody2D
 @onready var area_deteksi = $DeteksiPlayer
 @onready var area_serang = $Serang
 @onready var attack_timer = $AttackTimer
+@onready var audio_walk = $AudioStreamPlayer2D           # Suara jalan
+@onready var audio_attack = $"AudioStreamPlayer2D2"       # Suara serangan
+@onready var audio_run = $"AudioStreamPlayer2D3"          # Suara lari
 
 # === STAT ===
 var attack_min = 10
@@ -36,38 +39,35 @@ func _ready():
 
 	_set_random_target()
 
+
 func _physics_process(delta):
+	# === Saat menyerang ===
 	if is_attacking and player:
+		_stop_all_movement_sounds()
+		_play_attack_sound()
 		velocity = Vector2.ZERO
 		var dir = (player.global_position - global_position).normalized()
 		anim.play(_get_anim("serang", dir))
 		return
 
+	# === Saat mengejar player ===
 	if is_chasing and player:
 		var dist = global_position.distance_to(player.global_position)
 		if dist > STOP_DISTANCE:
 			var dir = (player.global_position - global_position).normalized()
 			velocity = dir * chase_speed
-
-			var is_running = true
-			if is_attacking:
-				if is_running:
-					anim.play(_get_anim("seranglari", dir))
-				else:
-					anim.play(_get_anim("serangjalan", dir))
-			else:
-				if is_running:
-					anim.play(_get_anim("lari", dir))
-				else:
-					anim.play(_get_anim("jalan", dir))
+			_play_run_sound()
+			anim.play(_get_anim("lari", dir))
 		else:
 			velocity = Vector2.ZERO
+			_stop_all_movement_sounds()
 			anim.play(_get_anim("idle", (player.global_position - global_position).normalized()))
 	else:
-		# === RANDOM GERAK ===
+		# === Gerak acak (patroli) ===
 		if global_position.distance_to(random_target) < 10:
 			idle_timer += delta
 			velocity = Vector2.ZERO
+			_stop_all_movement_sounds()
 			anim.play(_get_anim("idle", Vector2.DOWN))
 			if idle_timer >= IDLE_DURATION:
 				_set_random_target()
@@ -75,6 +75,7 @@ func _physics_process(delta):
 		else:
 			var dir = (random_target - global_position).normalized()
 			velocity = dir * speed
+			_play_walk_sound()
 			anim.play(_get_anim("jalan", dir))
 
 	move_and_slide()
@@ -116,10 +117,12 @@ func _on_attack_out(body):
 	if body.is_in_group("player"):
 		is_attacking = false
 		attack_timer.stop()
+		_stop_attack_sound()
 
 func _do_attack(target):
 	if not target:
 		return
+	_play_attack_sound()
 	var damage = rng.randi_range(attack_min, attack_max)
 	if target.has_method("take_damage"):
 		target.take_damage(damage)
@@ -130,19 +133,46 @@ func _on_attack_timer_timeout():
 		attack_timer.start(attack_cooldown)
 
 
+# === AUDIO SYSTEM ===
+func _play_walk_sound():
+	if not audio_walk.playing:
+		audio_walk.pitch_scale = rng.randf_range(0.9, 1.1)
+		audio_walk.play()
+		audio_run.stop()
+
+func _play_run_sound():
+	if not audio_run.playing:
+		audio_run.pitch_scale = rng.randf_range(1.1, 1.25)  # Lebih cepat dari jalan
+		audio_run.play()
+		audio_walk.stop()
+
+func _stop_all_movement_sounds():
+	if audio_walk.playing:
+		audio_walk.stop()
+	if audio_run.playing:
+		audio_run.stop()
+
+func _play_attack_sound():
+	if not audio_attack.playing:
+		# Sesuaikan tempo dengan kecepatan serangan
+		var base_cooldown = 3.0
+		var pitch_by_speed = clamp(base_cooldown / attack_cooldown, 0.7, 1.3)
+		audio_attack.pitch_scale = rng.randf_range(pitch_by_speed - 0.05, pitch_by_speed + 0.05)
+		audio_attack.play()
+
+func _stop_attack_sound():
+	if audio_attack.playing:
+		audio_attack.stop()
+
+
 # === ANIMASI ARAH ===
 func _get_anim(base:String, dir:Vector2=Vector2.ZERO) -> String:
-	# Arah kanan / kiri
 	if abs(dir.x) > abs(dir.y):
 		anim.flip_h = dir.x < 0
 		return base + "_kanan_kiri"
-
-	# Arah atas
 	elif dir.y < 0:
 		anim.flip_h = false
 		return base + "_atas"
-
-	# Arah bawah
 	else:
 		anim.flip_h = false
 		return base + "_bawah"

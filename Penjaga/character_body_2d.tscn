@@ -1,4 +1,4 @@
-[gd_scene load_steps=148 format=3 uid="uid://d3illdaxl1oel"]
+[gd_scene load_steps=151 format=3 uid="uid://d3illdaxl1oel"]
 
 [ext_resource type="Script" uid="uid://ndhi5oujnvu3" path="res://Penjaga/character_body_2d.gd" id="1_8htl7"]
 [ext_resource type="Texture2D" uid="uid://d0sa3xfudxvfn" path="res://asset game tuyul/craftpix-net-180537-free-swordsman-1-3/PNG/Swordsman_lvl3/With_shadow/Swordsman_lvl3_Idle_with_shadow.png" id="2_w7gmr"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://csr0udfewnmkr" path="res://asset game tuyul/craftpix-net-180537-free-swordsman-1-3/PNG/Swordsman_lvl3/With_shadow/Swordsman_lvl3_attack_with_shadow.png" id="5_wd1id"]
 [ext_resource type="Texture2D" uid="uid://dny5weom1o6sw" path="res://asset game tuyul/craftpix-net-180537-free-swordsman-1-3/PNG/Swordsman_lvl3/With_shadow/Swordsman_lvl3_Walk_Attack_with_shadow.png" id="6_mms4k"]
 [ext_resource type="Texture2D" uid="uid://dpynfb57sif6r" path="res://asset game tuyul/craftpix-net-180537-free-swordsman-1-3/PNG/Swordsman_lvl3/With_shadow/Swordsman_lvl3_Run_Attack_with_shadow.png" id="7_707gv"]
+[ext_resource type="AudioStream" uid="uid://dljnncn8xjfi1" path="res://walking-on-wood-363349.mp3" id="8_wd1id"]
+[ext_resource type="AudioStream" uid="uid://cq6n8ic8sxs0g" path="res://sword slice player.mp3" id="9_cx20c"]
+[ext_resource type="AudioStream" uid="uid://cykh1t7w3gfsq" path="res://lari penjaga.mp3" id="10_wd1id"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yhbg4"]
 atlas = ExtResource("2_w7gmr")
@@ -749,7 +752,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_atas",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -778,7 +781,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_bawah",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -807,7 +810,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_kanan_kiri",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -836,7 +839,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serang_atas",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -865,7 +868,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serang_bawah",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -894,7 +897,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serang_kanan_kiri",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -917,7 +920,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serangjalan_atas",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -940,7 +943,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serangjalan_bawah",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -963,7 +966,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"serangjalan_kanan_kiri",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -992,7 +995,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"seranglari_atas",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1021,7 +1024,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"seranglari_bawah",
-"speed": 7.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1050,41 +1053,55 @@ animations = [{
 }],
 "loop": true,
 "name": &"seranglari_kanan_kiri",
-"speed": 7.0
+"speed": 9.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8htl7"]
-radius = 15.0
+radius = 6.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_trme6"]
-radius = 45.0
+radius = 58.00862
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w7gmr"]
-radius = 20.0
-height = 40.0
+radius = 24.0
+height = 52.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+y_sort_enabled = true
 slide_on_ceiling = false
 script = ExtResource("1_8htl7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ml05e")
-animation = &"idle_bawah"
-frame_progress = 0.20807329
+animation = &"serang_kanan_kiri"
+frame_progress = 0.7601135
+offset = Vector2(0, -15)
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8htl7")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_wd1id")
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_cx20c")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_wd1id")
+
 [node name="DeteksiPlayer" type="Area2D" parent="."]
 
 [node name="DeteksiPlayer" type="CollisionShape2D" parent="DeteksiPlayer"]
+position = Vector2(0, -13)
 shape = SubResource("CircleShape2D_trme6")
 debug_color = Color(0.9490196, 0, 0, 0.41960785)
 
 [node name="Serang" type="Area2D" parent="."]
 
 [node name="Serang" type="CollisionShape2D" parent="Serang"]
+position = Vector2(0, -14)
 shape = SubResource("CapsuleShape2D_w7gmr")
 debug_color = Color(0, 0.6, 0, 0.41960785)
 

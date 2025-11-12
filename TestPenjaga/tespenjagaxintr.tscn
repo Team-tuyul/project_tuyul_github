@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw1p2lmox3j8u"]
+
+[ext_resource type="PackedScene" uid="uid://x4td6d840odx" path="res://intreriorrumah/Interior.tscn" id="1_t7fch"]
+[ext_resource type="PackedScene" uid="uid://d3illdaxl1oel" path="res://Penjaga/character_body_2d.tscn" id="2_b6go0"]
+
+[node name="Node2D" instance=ExtResource("1_t7fch")]
+
+[node name="Node2D" parent="." index="2" instance=ExtResource("1_t7fch")]
+position = Vector2(764, 369)
+
+[node name="Node2D2" parent="." index="3" instance=ExtResource("1_t7fch")]
+position = Vector2(344, 364)
+
+[node name="CharacterBody2D" parent="." index="4" instance=ExtResource("2_b6go0")]
+position = Vector2(301, 335)
