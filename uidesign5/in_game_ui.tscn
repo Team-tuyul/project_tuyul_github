@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=3 uid="uid://eexmhk8hhuhs"]
+[gd_scene load_steps=37 format=3 uid="uid://eexmhk8hhuhs"]
 
 [ext_resource type="Texture2D" uid="uid://b2kcc4gkfxpgq" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_mr5hi"]
 [ext_resource type="Script" uid="uid://o72efkqv4sv8" path="res://uidesign5/popup_menu_manager.gd" id="1_o8w1j"]
+[ext_resource type="Script" uid="uid://bvlqtw0vduyrb" path="res://uidesign5/in_game_ui.gd" id="1_w8sxe"]
 [ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="2_a2rtn"]
 [ext_resource type="Script" uid="uid://cprjh2wh320tp" path="res://uidesign5/stat_display_menu_manger.gd" id="3_2dq48"]
 [ext_resource type="FontFile" uid="uid://iyko7vrordi8" path="res://uidesign5/toybox_font/ToyBox.ttf" id="3_5rjt0"]
@@ -647,6 +648,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w8sxe")
 
 [node name="popupMenu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "help_menu_screen", "setting_menu_screen", "pause_menu_screen", "open_menu_button", "close_menu_button", "open_help_button", "close_help_button", "open_settings_button", "close_settings_button", "open_pause_button", "close_pause_button", "open_quit_button")]
 layout_mode = 1
@@ -998,7 +1000,7 @@ custom_minimum_size = Vector2(35, 35)
 layout_mode = 2
 texture = ExtResource("7_c0eun")
 
-[node name="HScrollBar" type="HScrollBar" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumeBar"]
+[node name="HSlider" type="HScrollBar" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumeBar"]
 custom_minimum_size = Vector2(150, 10)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1007,6 +1009,8 @@ theme_override_styles/scroll_focus = SubResource("StyleBoxTexture_invgr")
 theme_override_styles/grabber = SubResource("StyleBoxTexture_5hwkr")
 theme_override_styles/grabber_highlight = SubResource("StyleBoxTexture_sa64n")
 theme_override_styles/grabber_pressed = SubResource("StyleBoxTexture_sa64n")
+max_value = 1.0
+step = 0.01
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumeBar"]
 layout_mode = 2

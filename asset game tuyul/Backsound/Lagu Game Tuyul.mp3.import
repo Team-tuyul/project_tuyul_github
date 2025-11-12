@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chawsbvwwy2f6"
+path="res://.godot/imported/Lagu Game Tuyul.mp3-233482c580399c458638719a669a163b.mp3str"
+
+[deps]
+
+source_file="res://asset game tuyul/Backsound/Lagu Game Tuyul.mp3"
+dest_files=["res://.godot/imported/Lagu Game Tuyul.mp3-233482c580399c458638719a669a163b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

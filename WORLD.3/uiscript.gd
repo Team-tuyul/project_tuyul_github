@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var bgm = $AudioStreamPlayer2D
 # Ganti path ini dengan lokasi file scene UI CanvasLayer Anda.
 # Contoh: "res://UI/main_hud.tscn"
 const UI_SCENE = preload("res://uidesign5/canvas_layer.tscn")
@@ -20,7 +21,8 @@ func _ready():
 	# Opsional: Hubungkan input tombol tertentu (misalnya tombol 'ESC') ke fungsi pause
 	# if Input.is_action_just_pressed("ui_cancel"):
 	# 	set_game_paused(not get_tree().paused)
-
+	bgm.play()  # mulai lagu
+	bgm.stream.loop = true  # pastikan looping aktif
 
 # =========================================================================
 # FUNGSI PENGONTROL PAUSE GAME
@@ -36,7 +38,7 @@ func set_game_paused(is_paused: bool):
 		# di skrip yang melekat pada CanvasLayer (in_game_ui.gd)
 		if is_paused:
 			# Tampilkan menu pause
-			ui_instance.call_deferred("show_pause_menu") 
+			ui_instance.call_deferred("show_pause_menu")
 		else:
 			# Sembunyikan menu pause
 			ui_instance.call_deferred("hide_pause_menu")
