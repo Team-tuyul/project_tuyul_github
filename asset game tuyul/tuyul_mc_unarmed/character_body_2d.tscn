@@ -1,12 +1,12 @@
 [gd_scene load_steps=123 format=3 uid="uid://diqg31ir4by5o"]
 
 [ext_resource type="Script" uid="uid://ck1aqnc1keet5" path="res://character_body_2d.gd" id="1_qua5r"]
-[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Death_with_shadow.png" id="2_msa7x"]
-[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Hurt_with_shadow.png" id="3_lrw7g"]
-[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Idle_with_shadow.png" id="4_6ynod"]
-[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Run_with_shadow.png" id="5_eyxpf"]
-[ext_resource type="Texture2D" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Walk_with_shadow.png" id="6_8ctgo"]
-[ext_resource type="Script" uid="uid://cf7fjguo81eut" path="res://player_interaction_item.gd" id="7_msa7x"]
+[ext_resource type="Texture2D" uid="uid://d1acffysc34tl" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Death_with_shadow.png" id="2_msa7x"]
+[ext_resource type="Texture2D" uid="uid://dxghgmdhlioe1" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Hurt_with_shadow.png" id="3_lrw7g"]
+[ext_resource type="Texture2D" uid="uid://cks1cnd1sxyll" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Idle_with_shadow.png" id="4_6ynod"]
+[ext_resource type="Texture2D" uid="uid://bi1ootikiuwlc" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Run_with_shadow.png" id="5_eyxpf"]
+[ext_resource type="Texture2D" uid="uid://bomgetcywgjcr" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Walk_with_shadow.png" id="6_8ctgo"]
+[ext_resource type="Script" uid="uid://cn4o5i60pptoe" path="res://asset game tuyul/tuyul_mc_unarmed/player_interaction_item.gd" id="7_msa7x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qua5r"]
 atlas = ExtResource("4_6ynod")
@@ -922,13 +922,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ohnj8"]
-radius = 12.0
-height = 46.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lrw7g"]
-radius = 57.0
+radius = 18.0
+height = 62.84
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qua5r"]
+radius = 66.007576
+
+[node name="Player_unarmed" type="CharacterBody2D"]
+
 script = ExtResource("1_qua5r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -948,8 +950,9 @@ shape = SubResource("CapsuleShape2D_ohnj8")
 script = ExtResource("7_msa7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_interaction_item"]
-shape = SubResource("CircleShape2D_lrw7g")
-debug_color = Color(0.5507883, 0.5511772, 0.34159955, 0.41960785)
+
+shape = SubResource("CircleShape2D_qua5r")
+
 
 [connection signal="area_entered" from="player_interaction_item" to="." method="_on_player_interaction_item_area_entered"]
 [connection signal="area_exited" from="player_interaction_item" to="." method="_on_player_interaction_item_area_exited"]
