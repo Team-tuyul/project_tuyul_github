@@ -2920,9 +2920,9 @@ texture = ExtResource("10_v73am")
 18:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48.45294, -4.7399616, 10.269917, -4.7399616, 46.34629, -5.003294, 46.872955, -1.8433189, 8, -1.3166561, -47.953926, -1.593153)
 13:22/size_in_atlas = Vector2i(8, 2)
 13:22/0 = 0
-13:22/0/y_sort_origin = 16
-13:22/0/physics_layer_1/polygon_0/points = PackedVector2Array(-63.112427, 10.446194, -29.379925, 13.710632, 30.468071, 13.493002, 59.630363, 10.228567, 60.162743, 11.3310995, 31.924925, 14.388698, -30.486053, 14.568558, -63.112427, 12.404856)
-13:22/0/physics_layer_1/polygon_1/points = PackedVector2Array(-56.910004, -16.975067, -58.542217, -14.581146, 57.45407, -14.581146, 57.998146, -16.10455)
+13:22/0/y_sort_origin = 20
+13:22/0/physics_layer_1/polygon_0/points = PackedVector2Array(-62.7707, 7.733925, -28.777397, 10.971382, -3.5971756, 10.971382, 30.575981, 10.251947, 58.99366, 7.3742075, 60.162743, 11.3310995, 31.924925, 14.388698, -30.486053, 14.568558, -63.112427, 12.404856)
+13:22/0/physics_layer_1/polygon_1/points = PackedVector2Array(-56.910004, -16.975067, -58.542217, -14.581146, -53.058327, -12.590112, -46.04384, -11.151242, -35.79189, -10.611666, -1.978447, -9.712373, 30.755844, -9.892229, 46.94313, -11.15124, 54.13748, -11.510958, 57.45407, -14.581146, 57.998146, -16.10455, -0.71943283, -12.949829)
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -3039,7 +3039,7 @@ tile_map_data = PackedByteArray("AADA/+P/BQAQACQAAADA/9//BQAQACQAAADR/+f/BQAQACQ
 tile_set = SubResource("TileSet_unw06")
 
 [node name="jembatan" type="TileMapLayer" parent="TileMap"]
-y_sort_enabled = true
+z_index = 1
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAFAP//CQANABYAAAAFAOH/CQANABYAAAA=")
 tile_set = SubResource("TileSet_unw06")
