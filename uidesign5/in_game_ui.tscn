@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://o72efkqv4sv8" path="res://uidesign5/popup_menu_manager.gd" id="1_o8w1j"]
 [ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="2_a2rtn"]
 [ext_resource type="Script" uid="uid://cprjh2wh320tp" path="res://uidesign5/stat_display_menu_manger.gd" id="3_2dq48"]
-[ext_resource type="FontFile" uid="uid://iyko7vrordi8" path="res://uidesign5/toybox_font/ToyBox.ttf" id="3_5rjt0"]
+[ext_resource type="FontFile" uid="uid://5gb4apagg8oj" path="res://asset game tuyul/karmatic-arcade/ka1.ttf" id="6_b02hn"]
 [ext_resource type="Texture2D" uid="uid://drmph5ftcoha8" path="res://asset game tuyul/Screenshot 2025-11-11 233137.png" id="6_kohhf"]
 [ext_resource type="Script" uid="uid://b5iwngex63cas" path="res://uidesign5/setting_menu.gd" id="7_2s5oe"]
 [ext_resource type="Texture2D" uid="uid://c6o6b1nb8x41y" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/audio-off-icon.png" id="7_c0eun"]
@@ -780,7 +780,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_hjk8w")
 [node name="statDisplayContainer" type="VBoxContainer" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 4
+size_flags_vertical = 0
 theme_override_constants/separation = 0
 script = ExtResource("3_2dq48")
 
@@ -789,8 +789,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("3_5rjt0")
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("6_b02hn")
+theme_override_font_sizes/font_size = 15
 text = "COINS:"
 
 [node name="scoreDisplay" type="Label" parent="popupMenu/menu/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
@@ -798,9 +798,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("3_5rjt0")
-theme_override_font_sizes/font_size = 30
-text = "SCORE:"
+theme_override_fonts/font = ExtResource("6_b02hn")
+theme_override_font_sizes/font_size = 15
+text = "Health Status"
 
 [node name="seperator" type="Control" parent="popupMenu/menu"]
 layout_mode = 2
@@ -856,7 +856,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("3_5rjt0")
+theme_override_fonts/font = ExtResource("6_b02hn")
 theme_override_font_sizes/font_size = 30
 text = "How to play"
 
@@ -878,29 +878,29 @@ custom_minimum_size = Vector2(280, 0)
 layout_mode = 2
 
 [node name="text1Display" type="Label" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("3_5rjt0")
+theme_override_fonts/font = ExtResource("6_b02hn")
 theme_override_font_sizes/font_size = 13
 text = "Game ini menceritakan
-tentang
-bagaimana aksi dari 
-seorang tuyul
-yang melawan para 
-goblin dan 
-makhluk lainnya 
-untuk menggerakkan player kamu bisa menggunakan arrow key ←→↑↓"
+tentang perjalanan 
+seorang petualang yang
+terkutuk menjadi
+boneka dummy
+"
 autowrap_mode = 3
 justification_flags = 161
 
 [node name="text1Display2" type="Label" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("3_5rjt0")
+theme_override_fonts/font = ExtResource("6_b02hn")
 theme_override_font_sizes/font_size = 13
 text = "
 Sebisa mungkin hindari makhluk
@@ -911,7 +911,8 @@ autowrap_mode = 3
 justification_flags = 161
 
 [node name="TextureRect" type="TextureRect" parent="popupMenu/helpMenu/MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 texture = ExtResource("6_kohhf")
 expand_mode = 1
@@ -973,7 +974,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("3_5rjt0")
+theme_override_fonts/font = ExtResource("6_b02hn")
 theme_override_font_sizes/font_size = 30
 text = "SETTINGS"
 
