@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://dcte8hdgs3l1q"]
+
+[ext_resource type="Texture2D" uid="uid://cgo2m6p1bl8tq" path="res://FREE_Skeleton_Asset_Pack_v1.0-Micaelle_Britto/Idle/Idle_F.png" id="1_jp04v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obt43"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqlcy"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbwxx"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmumq"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luw5p"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rdb8"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ss1v"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy2qe"]
+atlas = ExtResource("1_jp04v")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2mrh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obt43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqlcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbwxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmumq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luw5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rdb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ss1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy2qe")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ehsyj"]
+radius = 12.0
+height = 38.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 0)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_i2mrh")
+animation = &"idle"
+frame_progress = 0.9671975
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ehsyj")
