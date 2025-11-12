@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://yk6vwn47f12f"
+path="res://.godot/imported/running-on-dirt-road-345729.mp3-1aa91fed1e7180942890b4b6ecab9f1c.mp3str"
+
+[deps]
+
+source_file="res://sfx karakter/running-on-dirt-road-345729.mp3"
+dest_files=["res://.godot/imported/running-on-dirt-road-345729.mp3-1aa91fed1e7180942890b4b6ecab9f1c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

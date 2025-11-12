@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://diqg31ir4by5o"]
+[gd_scene load_steps=127 format=3 uid="uid://diqg31ir4by5o"]
 
 [ext_resource type="Script" uid="uid://ck1aqnc1keet5" path="res://character_body_2d.gd" id="1_qua5r"]
 [ext_resource type="Texture2D" uid="uid://d1acffysc34tl" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Death_with_shadow.png" id="2_msa7x"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bi1ootikiuwlc" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Run_with_shadow.png" id="5_eyxpf"]
 [ext_resource type="Texture2D" uid="uid://bomgetcywgjcr" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Unarmed/With_shadow/Unarmed_Walk_with_shadow.png" id="6_8ctgo"]
 [ext_resource type="Script" uid="uid://cn4o5i60pptoe" path="res://asset game tuyul/tuyul_mc_unarmed/player_interaction_item.gd" id="7_msa7x"]
+[ext_resource type="AudioStream" uid="uid://e2pxd8dk3y05" path="res://sfx karakter/step player.mp3" id="8_lrw7g"]
+[ext_resource type="AudioStream" uid="uid://yk6vwn47f12f" path="res://sfx karakter/running-on-dirt-road-345729.mp3" id="9_6ynod"]
+[ext_resource type="AudioStream" uid="uid://dcu4c5i6mjx3g" path="res://sfx karakter/grunt1-68324.mp3" id="10_8ctgo"]
+[ext_resource type="AudioStream" uid="uid://bp2craojc52kh" path="res://sfx karakter/grunt2-84534.mp3" id="11_pyhcb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qua5r"]
 atlas = ExtResource("4_6ynod")
@@ -578,7 +582,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jalan",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -601,7 +605,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jalan_atas",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -624,7 +628,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jalan_bawah",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -713,7 +717,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -742,7 +746,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_atas",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -771,7 +775,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"lari_bawah",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -936,8 +940,7 @@ texture_filter = 1
 position = Vector2(1.4210855e-14, -0.9999995)
 scale = Vector2(2.609375, 2.484375)
 sprite_frames = SubResource("SpriteFrames_wbwqr")
-animation = &"idle_bawah"
-frame_progress = 0.37588957
+animation = &"jalan_bawah"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -949,6 +952,18 @@ script = ExtResource("7_msa7x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_interaction_item"]
 shape = SubResource("CircleShape2D_qua5r")
+
+[node name="sfx_jalan_unarmed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_lrw7g")
+
+[node name="sfx_lari_unarmed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_6ynod")
+
+[node name="sfx_sakit_unarmed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_8ctgo")
+
+[node name="sfx_mati_unarmed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_pyhcb")
 
 [connection signal="area_entered" from="player_interaction_item" to="." method="_on_player_interaction_item_area_entered"]
 [connection signal="area_exited" from="player_interaction_item" to="." method="_on_player_interaction_item_area_exited"]
