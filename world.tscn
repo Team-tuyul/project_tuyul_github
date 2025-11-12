@@ -1,12 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfr2tl25o3km7"]
+[gd_scene load_steps=2 format=3 uid="uid://bfr2tl25o3km7"]
 
 [ext_resource type="PackedScene" uid="uid://cqu0sy21xo3hp" path="res://WORLD.3/world.tscn" id="1_f3sb7"]
-[ext_resource type="Script" uid="uid://cylv7oocknm0f" path="res://world.gd" id="2_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://eexmhk8hhuhs" path="res://uidesign5/in_game_ui.tscn" id="3_aqk2v"]
 
 [node name="World" instance=ExtResource("1_f3sb7")]
-script = ExtResource("2_tlwt5")
-
-[node name="inGameUI" parent="CharacterBody2D" index="3" instance=ExtResource("3_aqk2v")]
-offset_top = 44.0
-offset_bottom = 44.0
