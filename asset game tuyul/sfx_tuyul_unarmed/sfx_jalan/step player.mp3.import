@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://e2pxd8dk3y05"
+path="res://.godot/imported/step player.mp3-ec6d5bc9ee8a5afb9387d5fcec28766e.mp3str"
+
+[deps]
+
+source_file="res://asset game tuyul/sfx_tuyul_unarmed/sfx_jalan/step player.mp3"
+dest_files=["res://.godot/imported/step player.mp3-ec6d5bc9ee8a5afb9387d5fcec28766e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

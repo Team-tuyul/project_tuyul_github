@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://brm4yawvc1sh0"]
-
-[ext_resource type="PackedScene" uid="uid://diqg31ir4by5o" path="res://asset game tuyul/tuyul_mc_unarmed/tuyulunarmed.tscn" id="1_sf0xg"]
-
-[node name="dunia" type="Node2D"]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_sf0xg")]
