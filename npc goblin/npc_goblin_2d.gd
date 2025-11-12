@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
+@onready var audio_jalan = $Audio_Jalan_Goblin  # node AudioStreamPlayer2D untuk sound langkah
 
 @export var speed: float = 20.0
 @export var walk_distance: float = 40.0
 @export var idle_duration: float = 5.0
-@export var start_delay: float = 3.0  # delay sebelum mulai jalan pertama
+@export var start_delay: float = 5.0  # delay sebelum mulai jalan pertama
 
 var start_position: Vector2
 var target_position: Vector2
@@ -19,10 +20,12 @@ func _ready():
 	start_position = global_position
 	target_position = start_position
 	_play_idle("bawah")  # idle bawah pertama
+	_stop_sound()  # pastikan tidak bunyi di awal
 
 func _physics_process(delta):
 	if is_idling:
 		velocity = Vector2.ZERO
+		_stop_sound()  # berhenti suara kalau idle
 
 		# Delay sebelum mulai jalan pertama
 		if not first_idle_done:
@@ -46,14 +49,17 @@ func _physics_process(delta):
 		else:
 			return
 
-	# Bergerak ke target dengan smooth
+	# --- Bagian gerak ---
 	var dir = (target_position - global_position)
 	if dir.length() > 1: # jangan gerak kalau sudah dekat
 		dir = dir.normalized()
 		velocity = dir * speed
 		_play_jalan(dir)
+		_play_sound()  # nyalakan suara jalan saat bergerak
 	else:
 		velocity = Vector2.ZERO
+		_stop_sound()  # berhenti suara kalau diam
+
 	move_and_slide()
 
 	# Jika sampai target → idle kanan-kiri
@@ -77,3 +83,12 @@ func _play_idle(arah: String):
 			anim.play("idle_atas")
 		"kanan_kiri":
 			anim.play("idle_kanan_kiri")
+
+# --- Sound kontrol ---
+func _play_sound():
+	if not audio_jalan.playing:
+		audio_jalan.play()
+
+func _stop_sound():
+	if audio_jalan.playing:
+		audio_jalan.stop()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8jbyrhh4ica7"
+path="res://.godot/imported/mati tumbuhan.mp3-ba93287d24097e92f3230644161a5575.mp3str"
+
+[deps]
+
+source_file="res://Theme Song/mati tumbuhan.mp3"
+dest_files=["res://.godot/imported/mati tumbuhan.mp3-ba93287d24097e92f3230644161a5575.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

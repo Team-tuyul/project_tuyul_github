@@ -1,7 +1,8 @@
-[gd_scene load_steps=37 format=3 uid="uid://d1ttyigdfhpiy"]
+[gd_scene load_steps=38 format=3 uid="uid://d1ttyigdfhpiy"]
 
 [ext_resource type="Texture2D" uid="uid://bifn3nabfit5o" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc1/With_shadow/orc1_idle_with_shadow.png" id="1_cdol5"]
 [ext_resource type="Script" uid="uid://kfd5x7hqw7pi" path="res://npc goblin/npc_goblin_2d.gd" id="1_t2x72"]
+[ext_resource type="AudioStream" uid="uid://wjvmn3pr0mhe" path="res://Theme Song/suara goblin.mp3" id="2_6oais"]
 [ext_resource type="Texture2D" uid="uid://bdkonvg6jx7kf" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc1/With_shadow/orc1_walk_with_shadow.png" id="2_t2x72"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5w33l"]
@@ -256,7 +257,12 @@ size = Vector2(43.333332, 20)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_t2x72")
 
+[node name="Audio_Jalan_Goblin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_6oais")
+max_distance = 100.0
+
 [node name="Area Aman" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_5w33l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

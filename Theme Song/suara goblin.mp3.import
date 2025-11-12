@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wjvmn3pr0mhe"
+path="res://.godot/imported/suara goblin.mp3-3aeaa10edb30b7a0ed0b314fbfa5b3d7.mp3str"
+
+[deps]
+
+source_file="res://Theme Song/suara goblin.mp3"
+dest_files=["res://.godot/imported/suara goblin.mp3-3aeaa10edb30b7a0ed0b314fbfa5b3d7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

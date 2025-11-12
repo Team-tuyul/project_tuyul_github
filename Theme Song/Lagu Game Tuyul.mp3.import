@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t8jut5fspemp"
+path="res://.godot/imported/Lagu Game Tuyul.mp3-6cae33e2938061121d8b1149f5832e5d.mp3str"
+
+[deps]
+
+source_file="res://Theme Song/Lagu Game Tuyul.mp3"
+dest_files=["res://.godot/imported/Lagu Game Tuyul.mp3-6cae33e2938061121d8b1149f5832e5d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
