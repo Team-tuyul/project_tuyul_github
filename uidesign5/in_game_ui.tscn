@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://o72efkqv4sv8" path="res://uidesign5/popup_menu_manager.gd" id="1_o8w1j"]
 [ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="2_a2rtn"]
 [ext_resource type="Script" uid="uid://cprjh2wh320tp" path="res://uidesign5/stat_display_menu_manger.gd" id="3_2dq48"]
-[ext_resource type="FontFile" uid="uid://5gb4apagg8oj" path="res://asset game tuyul/karmatic-arcade/ka1.ttf" id="6_b02hn"]
+[ext_resource type="FontFile" uid="uid://c3jg8pdiu2qn" path="res://asset game tuyul/boldpixels (2)/BoldPixels.ttf" id="5_x2roj"]
 [ext_resource type="Texture2D" uid="uid://drmph5ftcoha8" path="res://asset game tuyul/Screenshot 2025-11-11 233137.png" id="6_kohhf"]
 [ext_resource type="Script" uid="uid://b5iwngex63cas" path="res://uidesign5/setting_menu.gd" id="7_2s5oe"]
 [ext_resource type="Texture2D" uid="uid://c6o6b1nb8x41y" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/audio-off-icon.png" id="7_c0eun"]
@@ -789,7 +789,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("6_b02hn")
+theme_override_fonts/font = ExtResource("5_x2roj")
 theme_override_font_sizes/font_size = 15
 text = "COINS:"
 
@@ -798,7 +798,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("6_b02hn")
+theme_override_fonts/font = ExtResource("5_x2roj")
 theme_override_font_sizes/font_size = 15
 text = "Health Status"
 
@@ -856,7 +856,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("6_b02hn")
+theme_override_fonts/font = ExtResource("5_x2roj")
 theme_override_font_sizes/font_size = 30
 text = "How to play"
 
@@ -883,8 +883,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("6_b02hn")
-theme_override_font_sizes/font_size = 13
+theme_override_fonts/font = ExtResource("5_x2roj")
+theme_override_font_sizes/font_size = 18
 text = "Game ini menceritakan
 tentang perjalanan 
 seorang petualang yang
@@ -900,8 +900,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("6_b02hn")
-theme_override_font_sizes/font_size = 13
+theme_override_fonts/font = ExtResource("5_x2roj")
+theme_override_font_sizes/font_size = 18
 text = "
 Sebisa mungkin hindari makhluk
 yang akan menyerangmu 
@@ -974,7 +974,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.952941, 0.898039, 0.760784, 1)
 theme_override_colors/font_outline_color = Color(0.564706, 0.384314, 0.364706, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("6_b02hn")
+theme_override_fonts/font = ExtResource("5_x2roj")
 theme_override_font_sizes/font_size = 30
 text = "SETTINGS"
 
