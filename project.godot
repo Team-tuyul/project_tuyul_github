@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Project_tuyul"
-run/main_scene="uid://cvmjdvlc1vj6"
+run/main_scene="uid://cmpo1wt0cttpx"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+<<<<<<<Updatedupstreamrun/main_scene="uid://cdsgtxyai6wih"
 
 [dotnet]
 

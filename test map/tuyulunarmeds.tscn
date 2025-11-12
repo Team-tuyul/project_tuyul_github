@@ -1,6 +1,6 @@
-[gd_scene load_steps=185 format=3 uid="uid://kg8yjvr4hivk"]
+[gd_scene load_steps=185 format=3 uid="uid://b1ovyxo4iawh6"]
 
-[ext_resource type="Script" uid="uid://5o77dd2l2evj" path="res://script_karakter/tuyul_swordd.gd" id="1_oifbo"]
+[ext_resource type="Script" uid="uid://b1voxlo5jh02u" path="res://script_karakter/character_body_2d.gd" id="1_6ct3r"]
 [ext_resource type="Texture2D" uid="uid://chk0jd5ji7b6f" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Idle_with_shadow.png" id="2_1kp85"]
 [ext_resource type="Texture2D" uid="uid://dixathjcl8l2t" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Walk_with_shadow.png" id="3_qnedo"]
 [ext_resource type="Texture2D" uid="uid://2kgwe8ysqsmh" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Hurt_with_shadow.png" id="4_wyqjk"]
@@ -1345,7 +1345,7 @@ height = 22.0
 radius = 25.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
-script = ExtResource("1_oifbo")
+script = ExtResource("1_6ct3r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

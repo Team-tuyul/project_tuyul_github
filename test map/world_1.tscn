@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmpo1wt0cttpx"]
+
+[ext_resource type="PackedScene" uid="uid://kg8yjvr4hivk" path="res://test map/character_body_2d.tscn" id="1_lbmg3"]
+[ext_resource type="PackedScene" uid="uid://ci5nidgeqn3vu" path="res://coin_spawn/coin_spawner.tscn" id="2_mmw1i"]
+
+[node name="world1" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_lbmg3")]
+
+[node name="CoinSpawner" parent="." instance=ExtResource("2_mmw1i")]
