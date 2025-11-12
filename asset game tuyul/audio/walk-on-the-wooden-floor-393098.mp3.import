@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lcxix0nsol4v"
+path="res://.godot/imported/walk-on-the-wooden-floor-393098.mp3-5de9bc9d38f99621de35e848aa2bf28d.mp3str"
+
+[deps]
+
+source_file="res://asset game tuyul/audio/walk-on-the-wooden-floor-393098.mp3"
+dest_files=["res://.godot/imported/walk-on-the-wooden-floor-393098.mp3-5de9bc9d38f99621de35e848aa2bf28d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

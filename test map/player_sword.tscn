@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=3 uid="uid://kg8yjvr4hivk"]
+[gd_scene load_steps=188 format=3 uid="uid://kg8yjvr4hivk"]
 
 [ext_resource type="Script" uid="uid://5o77dd2l2evj" path="res://script_karakter/tuyul_swordd.gd" id="1_oifbo"]
 [ext_resource type="Texture2D" uid="uid://chk0jd5ji7b6f" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Idle_with_shadow.png" id="2_1kp85"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://ccvdd258nfegc" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Run_Attack_with_shadow.png" id="7_y1dt5"]
 [ext_resource type="Texture2D" uid="uid://dxyko2n3y4663" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_attack_with_shadow.png" id="8_au0nh"]
 [ext_resource type="Texture2D" uid="uid://sipoomn5u24v" path="res://asset game tuyul/craftpix-net-555940-free-base-4-direction-male-character-pixel-art/PNG/Sword/With_shadow/Sword_Walk_Attack_with_shadow.png" id="9_76bt2"]
+[ext_resource type="AudioStream" uid="uid://l2d1arylmt6t" path="res://asset game tuyul/audio/step player.mp3" id="10_6r1fv"]
+[ext_resource type="AudioStream" uid="uid://bdyxqxqeqfmab" path="res://asset game tuyul/audio/running-on-dirt-road-345729.mp3" id="11_enlsd"]
+[ext_resource type="AudioStream" uid="uid://boc54hrkvi1bx" path="res://asset game tuyul/audio/sword slice player.mp3" id="12_enlsd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6muj"]
 atlas = ExtResource("2_1kp85")
@@ -820,7 +823,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jalan",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -843,7 +846,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jalan_atas",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -866,7 +869,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jalan_bawah",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -955,7 +958,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"lari",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -984,7 +987,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"lari_atas",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1013,7 +1016,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"lari_bawah",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1207,7 +1210,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"sword_animation_up",
-"speed": 10.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1236,7 +1239,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"sword_attack_down",
-"speed": 10.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1265,7 +1268,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"sword_attack_samping",
-"speed": 10.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1351,7 +1354,7 @@ script = ExtResource("1_oifbo")
 texture_filter = 1
 scale = Vector2(1.0952381, 1)
 sprite_frames = SubResource("SpriteFrames_b6muj")
-animation = &"run_attack_bawah"
+animation = &"sword_animation_up"
 autoplay = "idle_bawah"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1368,3 +1371,12 @@ debug_color = Color(0.9795752, 0, 0.39078584, 0.41960785)
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_0etvg")
 debug_color = Color(0.71076095, 0.31356084, 0.92481476, 0.41960785)
+
+[node name="FootSteep_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_6r1fv")
+
+[node name="RunSteep_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_enlsd")
+
+[node name="AttackSound_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_enlsd")
