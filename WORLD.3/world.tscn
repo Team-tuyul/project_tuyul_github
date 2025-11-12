@@ -2837,3 +2837,4 @@ position = Vector2(834, -274)
 stream = ExtResource("22_rhbf1")
 volume_db = -6.0
 autoplay = true
+bus = &"Music"

@@ -25,7 +25,7 @@ func _ready():
 	toggle_popupmenu_buttons = [open_menu_button, close_menu_button]
 	close_menu_buttons = [close_settings_button, close_help_button, close_pause_button]
 
-func _process(delta):
+func _process(_delta):
 	update_button_scale()
 
 func update_button_scale():

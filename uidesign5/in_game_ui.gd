@@ -1,44 +1,118 @@
-extends Control
+extends MarginContainer
 
-# Pastikan nama node HSlider ini benar sesuai struktur scene Anda.
-# Contoh: $popupMenu/menu/baseMenuScreen/VBoxContainer/volumeBar/VBoxContainer/HSlider
-# Ganti path di bawah ini sesuai dengan lokasi HSlider Anda.
-@onready var volume_slider = $popupMenu/settingMenu/VBoxContainer/VBoxContainer/volumeBar/HSlider
+# ========== Variabel Menu ==========
+@export var menu_screen: VBoxContainer
+@export var open_menu_screen: VBoxContainer
+@export var help_menu_screen: MarginContainer
+@export var setting_menu_screen: MarginContainer
+@export var pause_menu_screen: MarginContainer
 
-# Pastikan nama Bus ini SAMA PERSIS dengan yang Anda buat (misalnya "Music")
-const MUSIC_BUS_NAME = "Music" 
+@export var open_menu_button: Button
+@export var close_menu_button: Button
+@export var open_help_button: Button
+@export var close_help_button: Button
+@export var open_settings_button: Button
+@export var close_settings_button: Button
+@export var open_pause_button: Button
+@export var close_pause_button: Button
+@export var open_quit_button: Button
+
+var in_menu_buttons: Array
+var close_menu_buttons: Array
+var toggle_popupmenu_buttons: Array
+
+# ========== Variabel Audio/Volume ==========
+const MUSIC_BUS_NAME = "Music" # Pastikan tidak ada spasi/karakter asing di akhir "Music"
 var music_bus_index: int = -1
 
+# Ubah path ini (NodePath) sesuai lokasi HSlider di Scene Tree Anda!
+# Berdasarkan struktur Anda, ini kemungkinan besar ada di dalam settingMenu
+@onready var volume_slider: HSlider = $settingMenu/VBoxContainer/VBoxContainer/HSlider # Sesuaikan path ini jika berbeda!
+
+# --------------------------------------------------------------------------
+
 func _ready():
-	# 1. Dapatkan indeks Bus. Kita lakukan ini hanya sekali di awal.
-	music_bus_index = AudioServer.get_bus_index(Music)
+	# Inisialisasi Tombol (Logika Lama)
+	in_menu_buttons = [open_help_button, open_settings_button, open_pause_button, open_quit_button]
+	toggle_popupmenu_buttons = [open_menu_button, close_menu_button]
+	close_menu_buttons = [close_settings_button, close_help_button, close_pause_button]
 	
-	if music_bus_index == -1:
-		# Peringatan jika Bus tidak ditemukan
-		print("Error: Audio Bus '%s' tidak ditemukan! Cek pengaturan Audio." % MUSIC_BUS_NAME)
-		return
+	# Inisialisasi Audio Bus (Logika Baru)
+	music_bus_index = AudioServer.get_bus_index(MUSIC_BUS_NAME)
+	
+	# Hubungkan Slider dan Sinkronkan Nilai Awal
+	if volume_slider and music_bus_index != -1:
+		# Hubungkan sinyal 'value_changed' ke fungsi kustom
+		volume_slider.value_changed.connect(_on_music_volume_slider_value_changed)
 		
-	# 2. Inisialisasi: Atur nilai awal Slider sesuai volume Bus saat ini
-	var current_db = AudioServer.get_bus_volume_db(music_bus_index)
-	volume_slider.value = db_to_linear(current_db)
-	
-	# 3. Hubungkan sinyal (Jika Anda tidak menghubungkannya melalui editor Godot)
-	# Jika Anda sudah menghubungkannya di editor, baris ini opsional.
-	volume_slider.value_changed.connect(_on_slider_value_changed)
+		# Set nilai awal slider agar sesuai dengan volume Bus saat ini (saat game dimuat)
+		var current_volume_linear = db_to_linear(AudioServer.get_bus_volume_db(music_bus_index))
+		volume_slider.value = current_volume_linear
 
+func _process(delta):
+	update_button_scale()
 
-# Ini adalah fungsi yang dipanggil ketika nilai HSlider berubah
-# Nama fungsi ini harus SAMA PERSIS dengan yang Anda masukkan saat menghubungkan sinyal.
-func _on_slider_value_changed(new_value: float):
+# -------------------- Fungsi Audio/Volume --------------------
+
+## Fungsi ini dipanggil setiap kali HSlider digerakkan.
+func _on_music_volume_slider_value_changed(new_value: float):
 	if music_bus_index == -1:
+		# Bus 'Music' tidak ditemukan, berhenti
 		return
-		
-	# 1. Konversi nilai linear Slider (0.0 - 1.0) ke Desibel (dB)
-	var db_value = linear_to_db(new_value)
+
+	# 1. Konversi nilai linear (0.0 - 1.0) dari Slider ke Decibels (dB)
+	var db_value: float = linear_to_db(new_value)
 	
-	# 2. Tangani nilai nol (0.0) agar menjadi sangat hening (-80 dB)
-	if new_value <= 0.0001:
+	# 2. Atur volume Bus: Jika slider di paling kiri (mendekati 0), set ke nilai sunyi total (-80 dB)
+	if new_value <= 0.001:
 		db_value = -80.0
 	
-	# 3. Terapkan nilai dB ke Audio Bus yang sudah ditentukan
+	# 3. Terapkan volume ke Audio Bus 'Music'
 	AudioServer.set_bus_volume_db(music_bus_index, db_value)
+
+# -------------------- Fungsi Navigasi/Menu --------------------
+
+func update_button_scale():
+	for button in in_menu_buttons:
+		button_hov(button, 1.3, 0.2)
+	for button in toggle_popupmenu_buttons:
+		button_hov(button, 1.8, 0.3)
+	for button in close_menu_buttons:
+		button_hov(button, 1.5, 0.2)
+
+func button_hov(button: Button, tween_amt, duration):
+	button.pivot_offset = button.size / 2
+	if button.is_hovered():
+		tween(button, "scale", Vector2.ONE * tween_amt, duration)
+	else:
+		tween(button, "scale", Vector2.ONE, duration)
+
+func tween(button, property, amount, duration):
+	var tween = create_tween()
+	tween.tween_property(button, property, amount, duration)
+
+func toggle_visibility(object):
+	var anim = $AnimationPlayer # Asumsi AnimationPlayer ada di node inGameUI
+	var animation_type: String
+	if object.visible:
+		animation_type = "close_"
+	else:
+		animation_type = "open_"
+	anim.play(animation_type + str(object.name))
+
+# -------------------- Koneksi Sinyal Tombol --------------------
+
+func _on_toggle_menu_button_pressed():
+	toggle_visibility(menu_screen)
+
+func _on_toggle_help_menu_button_pressed():
+	toggle_visibility(help_menu_screen)
+
+func _on_toggle_setting_menu_button_pressed():
+	toggle_visibility(setting_menu_screen)
+
+func _on_pause_button_pressed():
+	toggle_visibility(pause_menu_screen)
+
+func _on_quit_button_pressed():
+	get_tree().quit()
