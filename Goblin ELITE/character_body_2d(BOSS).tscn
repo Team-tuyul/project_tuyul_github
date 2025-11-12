@@ -1295,7 +1295,7 @@ sprite_frames = SubResource("SpriteFrames_3fcyf")
 animation = &"serangjalan_kanan_kiri"
 offset = Vector2(0, -7)
 
-[node name="Collisionshape2D" type="CollisionShape2D" parent="."]
+[node name="Collisionshape2D" type="CollisionShape2D" parent="." groups=["enemy", "player"]]
 y_sort_enabled = true
 position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_tq8dd")

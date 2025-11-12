@@ -931,7 +931,7 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_fckeu"]
 radius = 25.0
 
-[node name="player_unarmed_fariz" type="CharacterBody2D"]
+[node name="player_unarmed_fariz" type="CharacterBody2D" groups=["enemy", "player"]]
 y_sort_enabled = true
 collision_mask = 3
 script = ExtResource("1_m8260")
