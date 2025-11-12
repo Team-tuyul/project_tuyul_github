@@ -17,7 +17,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6g6p1"]
 radius = 9.0
-height = 22.0
+height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6muj"]
 atlas = ExtResource("2_1kp85")
@@ -1354,16 +1354,17 @@ script = ExtResource("1_oifbo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_6g6p1")
 debug_color = Color(0.9795752, 0, 0.39078584, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(1, 23)
 scale = Vector2(1.0952381, 1)
 sprite_frames = SubResource("SpriteFrames_b6muj")
 animation = &"kena_hit_bawah"
 autoplay = "idle_bawah"
+offset = Vector2(0, -28)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
@@ -1371,7 +1372,6 @@ zoom = Vector2(3, 3)
 [node name="serang" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="serang"]
-position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_0etvg")
 debug_color = Color(0.71076095, 0.31356084, 0.92481476, 0.41960785)
 
