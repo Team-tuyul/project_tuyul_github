@@ -18,22 +18,26 @@ func _ready():
 func _physics_process(_delta):
 	player_movement()
 	atur_animasi()
+	
+func take_damage(amount: int):
+	print("Player terkena damage: ", amount)
+	# Tambahkan efek seperti knockback, animasi damage, atau pengurangan HP di sini
 
 func player_movement():
 	velocity = Vector2.ZERO
 	# --- Logika Invert Sprite Ditambahkan di sini ---
-	var input_detected = false
+	var _input_detected = false
 	
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = 1
 		arah = "kanan"
 		sprite.flip_h = false # ⬅️ Tidak dibalik saat ke kanan
-		input_detected = true
+		_input_detected = true
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -1
 		arah = "kiri"
 		sprite.flip_h = true # ⬅️ Dibalik (invert) saat ke kiri
-		input_detected = true
+		_input_detected = true
 	elif Input.is_action_pressed("ui_up"):
 		velocity.y = -1
 		arah = "atas"
