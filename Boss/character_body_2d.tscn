@@ -1,4 +1,4 @@
-[gd_scene load_steps=181 format=3 uid="uid://6i1pdj0xkmop"]
+[gd_scene load_steps=181 format=3 uid="uid://b8s4wtgcpw5cq"]
 
 [ext_resource type="Script" uid="uid://bf6q5vd5qf8pp" path="res://Boss/character_body_2d.gd" id="1_1ciif"]
 [ext_resource type="Texture2D" uid="uid://yvb43h7wystv" path="res://asset game tuyul/craftpix-net-363992-free-top-down-orc-game-character-pixel-art/PNG/Orc3/With_shadow/orc3_run_attack_with_shadow.png" id="1_somdx"]
