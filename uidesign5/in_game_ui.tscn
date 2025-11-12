@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://eexmhk8hhuhs"]
+[gd_scene load_steps=39 format=3 uid="uid://eexmhk8hhuhs"]
 
 [ext_resource type="Texture2D" uid="uid://b2kcc4gkfxpgq" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_mr5hi"]
 [ext_resource type="Script" uid="uid://o72efkqv4sv8" path="res://uidesign5/popup_menu_manager.gd" id="1_o8w1j"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://b5iwngex63cas" path="res://uidesign5/setting_menu.gd" id="7_2s5oe"]
 [ext_resource type="Texture2D" uid="uid://c6o6b1nb8x41y" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/audio-off-icon.png" id="7_c0eun"]
 [ext_resource type="Texture2D" uid="uid://b0q4ri132mo1d" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/audio-on-icon.png" id="8_g0y6w"]
+[ext_resource type="AudioStream" uid="uid://b50tehe1k1wy5" path="res://asset game tuyul/Backsound/menu-button-89141.mp3" id="8_x2roj"]
 [ext_resource type="Script" uid="uid://baf4c2mfj8s33" path="res://uidesign5/h_slider.gd" id="9_2s5oe"]
 [ext_resource type="Texture2D" uid="uid://btp5k3avs4lq0" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/brightness-off-icon.png" id="9_cirph"]
 [ext_resource type="Texture2D" uid="uid://dllpchlqm025b" path="res://uidesign5/Sprout Lands - UI Pack - Basic pack/custom sprites/brightness-on-icon.png" id="10_2j6rw"]
@@ -943,6 +944,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("7_2s5oe")
+
+[node name="MenuSFX" type="AudioStreamPlayer2D" parent="popupMenu/settingMenu"]
+stream = ExtResource("8_x2roj")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/settingMenu"]
 custom_minimum_size = Vector2(300, 150)
