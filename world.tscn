@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://cqu0sy21xo3hp" path="res://WORLD.3/world.tscn" id="1_f3sb7"]
 
 [node name="World" instance=ExtResource("1_f3sb7")]
+
+[node name="player_unarmed_fariz" parent="." index="4"]
+position = Vector2(-496, 38)

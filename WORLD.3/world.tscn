@@ -3299,7 +3299,7 @@ autoplay = true
 bus = &"Music"
 
 [node name="player_unarmed_fariz" parent="." instance=ExtResource("27_yu8hs")]
-position = Vector2(0, -15)
+position = Vector2(-504, 44)
 collision_mask = 15
 
 [node name="CharacterBody2D13" parent="." groups=["player"] instance=ExtResource("17_cfn2q")]
